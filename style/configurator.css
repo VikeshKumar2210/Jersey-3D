@@ -1,0 +1,536 @@
+/* =========================================================
+   1. GLOBAL & SHARED BUTTON STYLES
+   ========================================================= */
+
+
+/* Icon Button (shared style for navigation and actions) */
+.icnBtn {
+    display: flex;
+    align-self: center;
+    font-size: var(--f14);
+    padding: 6px 20px;
+    border-radius: 4px;
+    gap: 10px;
+}
+
+/* Grey button variant (Go Back button) */
+.greyBtn {
+    background: #DDDDDD;
+    color: #111111;
+    cursor: pointer;
+}
+
+.greyBtn:hover {
+    color: #111111;
+
+}
+
+.themeBtn:hover {
+    color: #F0F0F0;
+}
+
+/* Theme button variant (Next button) */
+.themeBtn {
+    background: var(--blue1);
+    cursor: pointer;
+    color: #FFF;
+}
+
+/* Icons inside buttons */
+.icnBtn img {
+    width: 8px;
+}
+
+/* =========================================================
+   2. GRID & COLUMN UTILITIES
+   ========================================================= */
+
+/* Utility: Span 5 columns in grid layout */
+.column5 {
+    grid-column: span 5;
+}
+
+/* =========================================================
+   3. CONFIGURATOR LAYOUT (MAIN COLUMN & CONTROLS)
+   ========================================================= */
+
+/* Main controls column container */
+.configuratorAllControls {
+    background: #F4F4F4;
+    border: 1px solid #D9D9D9;
+}
+
+/* Sidebar navigation tabs */
+.configuratorAllControls .sidebarTabs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* Sidebar tab icon size */
+.configuratorAllControls .sidebarTabs .tabsImgIcon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Sidebar tab label style */
+.configuratorAllControls .innerDiv .nav-item .nav-link .activeImg,
+.configuratorAllControls .innerDiv .nav-item .nav-link.active .inactiveImg {
+    display: none;
+}
+
+.configuratorAllControls .innerDiv .nav-item .nav-link.active .activeImg {
+    display: block;
+}
+
+.configuratorAllControls .innerDiv .nav-item .nav-link {
+    color: var(--grey1);
+    font-weight: 500;
+    font-size: var(--f14);
+    display: flex;
+    background: #FCFCFC;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: 500;
+    gap: 5px;
+    border-radius: 0;
+}
+
+.configuratorAllControls .sidebarTabs .nav-link.active {
+    background: #050505;
+    color: #FCFCFC;
+}
+
+
+.innerTabs .nav-pills {
+    position: relative;
+}
+
+.innerTabs .nav-pills .nav-link {
+    position: relative;
+    border-radius: 0;
+    /* remove pill roundness */
+    color: #000;
+    background: transparent;
+}
+
+.innerTabs .nav-pills .nav-link.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.innerTabs .nav-pills .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    /* thickness of progress bar */
+    width: 1 00%;
+    background-color: black;
+    border-radius: 2px;
+}
+
+/* =========================================================
+   4. HEADER SECTION (.customHeader)
+   ========================================================= */
+
+.customHeader {
+    padding: 12px 10px;
+    margin-bottom: 10px;
+}
+
+.customHeader .BrandLogo img {
+    width: 150px;
+}
+
+.customHeader .RightSide img {
+    width: 15px;
+}
+
+/* =========================================================
+   5. SIDEBAR CONTENT & NAVIGATION BUTTONS
+   ========================================================= */
+
+/* Container for sidebar content */
+.sidebar_content {
+    background: #FFFFFF;
+    border-top: 1px solid #D9D9D9;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.sidebar_content .sidebar_inner_content {
+    background: #FFFFFF;
+}
+
+/* Navigation buttons at bottom of sidebar */
+.screenNavigateBtn {
+    display: flex;
+    border-top: 1px solid #D1D1D1;
+    border-bottom: 1px solid #D1D1D1;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* =========================================================
+   6. SIDEBAR TAB ACTIVE STATES
+   ========================================================= */
+
+/* Active tab styles */
+li.nav-item.active a {
+    background: #111111 !important;
+    color: #D9D9D9 !important;
+}
+
+/* Divider between tabs */
+li.nav-item.border-left {
+    border-left: 1px solid #EAEAEA;
+}
+
+
+/* =========================================================
+   7. PATTERN TABS (Parent Styles)
+   ========================================================= */
+
+/* Pattern tabs container styles */
+.patternTabs .nav-pills {
+    gap: 0;
+    border-radius: 0;
+}
+
+.patternTabs .nav-pills .nav-link {
+    background: no-repeat;
+    border-bottom: 4px solid #D9D9D9;
+    color: #111111;
+    font-weight: 400;
+    padding: 10px 0;
+    font-size: var(--f14);
+    border-radius: 0;
+}
+
+.patternTabs .nav-pills .nav-link.active {
+    font-weight: 600;
+    background: none;
+    border-bottom: 4px solid #111111;
+}
+
+/* Inner padding for tabs area */
+.patternTabs .innerTabs {
+    padding: 12px 20px;
+}
+
+/* =========================================================
+   8. FABRICS SECTION (Radio Buttons)
+   ========================================================= */
+
+/* Fabric area wrapper */
+.selectFabric .fabricArea {
+    padding: 20px;
+    border-bottom: 2px solid #DDDDDD;
+}
+
+#fabricInnerTab {
+    padding: 20px 20px 0 20px;
+    gap: 0;
+}
+
+#fabricInnerTab .nav-item .nav-link {
+    border-bottom: 2px solid #D9D9D9;
+}
+
+#fabricInnerTab .nav-item .nav-link.active {
+    border-bottom: 2px solid #050505;
+}
+
+
+
+/* Default radio button style for fabrics */
+.patternTabs .selectFabric .defRadioStyle {
+    border: 1px solid #DDDDDD;
+    background: #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #7E7E7E;
+}
+
+/* Fabric radio images */
+.patternTabs .selectFabric .defRadioStyle img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+}
+
+/* Image container border transition */
+.patternTabs .selectFabric .defRadioStyle figure {
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    transition: .5s ease;
+}
+
+/* Hide native radio inputs */
+.fabricItems input[type="radio"] {
+    display: none;
+    transition: .3s ease;
+}
+
+/* Checked radio border style */
+.fabricItems input[type="radio"]:checked+figure {
+    border: 2px solid #4c4c4c;
+    border-radius: 50%;
+}
+
+/* Fabric item layout */
+.patternTabs .fabricItems {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.subCategory {
+    display: grid;
+    grid-column: span 3;
+    gap: 10PX;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 10px;
+    border-top: 1px solid #4444;
+}
+
+.subCategory.zone7 {
+    display: none;
+}
+
+.subCategory.zone3 {
+    display: none;
+}
+
+.subCategory .meshActiveColor {
+    width: 22px !important;
+    height: 22px !important;
+}
+
+.subCategory .colorsMeshItems input[type="radio"]:checked+.meshActiveColor {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.subCategory .colorsMeshItems {
+    padding: 2px 5px !important;
+    background: #F0F0F0;
+}
+
+.subCategory .meshActiveFaceName {
+    font-size: 12px;
+}
+
+/* =========================================================
+   9. SUB-ZONES SECTION (Smaller Radios)
+   ========================================================= */
+
+.patternTabs .subZonesDiv {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.subZonesDiv.active {
+    max-height: 200px;
+    opacity: 1;
+    margin-bottom: 20px;
+
+}
+
+.patternTabs .subZonesDiv .defRadioStyle {
+    padding: 5px;
+    font-size: 12px;
+    justify-content: center;
+    font-weight: 500;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+/* Subzone image size */
+.patternTabs .subZonesDiv .defRadioStyle img {
+    width: 25px;
+    height: 25px;
+}
+
+/* =========================================================
+   10. FABRIC MATERIAL CHECKBOXES
+   ========================================================= */
+
+/* All fabric materials grid container */
+.allFabricMaterials {
+    padding: 20px;
+    gap: 0 10px;
+}
+
+.allFabricMaterials .checkBoxDesign img {
+    width: 100%;
+}
+
+/* Individual fabric design card */
+.checkBoxDesign {
+    cursor: pointer;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: center;
+    position: relative;
+}
+
+.checkBoxDesign img {
+    max-width: 100%;
+}
+
+/* Fabric name label */
+.checkBoxDesign .fabricName {
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 0;
+    min-height: 40px;
+    color: #111111;
+}
+
+/* Hide native checkboxes */
+.checkBoxDesign input[type="checkbox"] {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+/* Checked checkbox border highlight */
+.checkBoxDesign input[type="checkbox"]:checked+figure {
+    border: 1px solid #2F50A3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Show checkbox when checked (if needed for styling) */
+.checkBoxDesign input[type="checkbox"]:checked {
+    display: block;
+}
+
+
+/* =========================================================
+ SUB TABS CONTENT
+   ========================================================= */
+.subTabsContent {
+    padding: 20px;
+    min-height: 650px;
+}
+
+.subTabsContent .subTabsTitle {
+    font-size: var(--f14);
+    color: #111111;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+COLLAR CONTROLS UI
+   ========================================================= */
+.collarAllStyles .collarItems figure,
+.JerseyAllStyles .JerseyItems figure,
+.JerseyAllStripes .JerseyItems figure {
+    border: 1px solid #DDDDDD;
+    height: 150px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+/* =========================================================
+JERSEY STYLE CONTROLS UI
+   ========================================================= */
+.JerseyAllStyles .JerseyItems figure {
+    padding: 20px;
+}
+
+/* =========================================================
+JERSEY STRIPES CONTROLS UI
+   ========================================================= */
+.JerseyAllStripes .JerseyItems figure {
+    padding: 20px;
+}
+
+.JerseyAllStripes .checkBoxDesign img {
+    max-width: 40px;
+}
+
+/* =========================================================
+  COLOR PALLET CHECKBOX
+ ========================================================= */
+.colorItems {
+    padding: 2px;
+    border: 1px solid #E9E9ED;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+
+}
+
+.colorItems label {
+    display: block;
+}
+
+.colorItems input[type="checkbox"] {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.colorsMeshItems input[type="radio"] {
+    display: none;
+}
+
+.colorsMeshItems {
+    padding: 6px 5px;
+    border: 1px solid #55555542;
+    border-radius: 3px;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    flex-direction: row;
+    font-weight: 500;
+    gap: 10px;
+    color: #7E7E7E;
+}
+
+.colorItems input[type="checkbox"]:checked {
+    display: block;
+}
+
+.colorsMeshItems input[type="radio"]:checked+.meshActiveColor {
+    background: #BCBCBC1A;
+    border: 2px solid #575656;
+    width: 30px;
+    height: 30px;
+}
+
+
+.colorsMeshItems input[type="radio"]:checked+.meshActiveColor {
+
+    width: 32px;
+    height: 32px;
+}

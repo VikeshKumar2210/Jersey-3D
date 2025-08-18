@@ -1,0 +1,3114 @@
+/* Inter font Family */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.font2 {
+    font-family: "Zen Dots", sans-serif;
+
+}
+
+/* #dynamicPatternForm label:nth-of-type(-n+10),
+#dynamicPatternForm label:nth-of-type(15),
+#dynamicPatternForm label:nth-of-type(16) {
+    display: none;
+}
+
+#gradientContent label:nth-of-type(-n+10),
+#gradientContent label:nth-of-type(15),
+#gradientContent label:nth-of-type(16) {
+    display: none;
+} */
+#mainHeader {
+    position: relative;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 999;
+    font-size: 18px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 12px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #626262;
+}
+
+#mainHeader .navLinks a.active {
+    color: #007bff;
+    position: relative;
+}
+
+#mainHeader .navLinks a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background: #007bff;
+}
+
+.sticky {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    transition: top 3s ease-in-out;
+    top: 100px;
+}
+
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    background: #FCFCFC !important;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    --f12: 12px;
+    --f13: 13px;
+    --f14: 14px;
+    --f15: 15px;
+    --f16: 16px;
+    --f20: 20px;
+    --white1: #FFFFFF;
+    --blue1: #2F50A3;
+    --grey1: #4E4E4E;
+    --grey2: #7E7E7E;
+    --black1: #050505;
+    --black2: #111111;
+    --font2: "Zen Dots", sans-serif;
+}
+
+
+
+.customHeader {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.customHeader .BrandLogo img {
+    width: 150px;
+}
+
+.customHeader .RightSide img {
+    width: 15px;
+}
+
+.modal.show {
+    z-index: 10003;
+    background: #000000b0;
+}
+
+.undo-redo-controls {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    display: none;
+}
+
+.undo-redo-controls img {
+    width: 20px;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+#preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    /* Background color for the preloader */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+#preloader img {
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+
+
+#preloaderProgress div {
+    background-color: #d9b06a;
+    display: inline-block;
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    opacity: .5;
+    border-radius: 50%;
+    -webkit-animation: ballPulseDouble 2s ease-in-out infinite;
+    animation: ballPulseDouble 2s ease-in-out infinite;
+}
+
+#preloaderProgress div:last-child {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #000000;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.textTransform.active {
+    border: 1px solid #274183 !important;
+    background: #2F50A3;
+    color: #FFF;
+    font-weight: 600;
+
+}
+
+/*------------------------------
+DEFAULT STYLING  
+ -------------------------*/
+a {
+    text-decoration: none !important;
+}
+
+.divider {
+    border: 1px solid #DDDDDD;
+}
+
+.head .title {
+    font-size: 25px;
+}
+
+.iconImg {
+    width: 18px;
+    position: relative;
+    top: -1px;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.Uppercase {
+    text-transform: Uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.Normal {
+    text-transform: normal;
+}
+
+
+.icon1 {
+    width: 10px;
+}
+
+.icon2 {
+    width: 25px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.fw4 {
+    font-weight: 400;
+}
+
+.fw5 {
+    font-weight: 500;
+}
+
+.fw6 {
+    font-weight: 600 !important;
+}
+
+.bg-none {
+    background: none !important;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.gap2 {
+    gap: 10px;
+}
+
+.gap3 {
+    gap: 15px;
+}
+
+.gap4 {
+    gap: 20px !important;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.flexRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+.grid2,
+.grid3,
+.grid4,
+.grid5,
+.grid6 {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+
+
+.checkbox-button .checkmark {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 2px;
+    margin-right: 2px;
+    transition: background-color 0.3s;
+}
+
+.patternArea .checkbox-button input:checked~.checkmark {
+    background-color: none;
+    border-color: none;
+}
+
+.checkbox-button input:checked+.checkmark {
+    background-color: #EEE;
+}
+
+.checkbox-button input:checked+.checkmark::after {
+    content: '\f00c';
+    /* Font Awesome checkmark code */
+    font-family: 'Font Awesome 5 Free';
+    /* Ensure this is correct */
+    font-weight: 900;
+    /* Font Awesome 5 Free uses different font weights */
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin: 4px;
+    background-color: #fff;
+    color: #104A93;
+    /* Change color as needed */
+    text-align: center;
+    /* Center the icon */
+    line-height: 6px;
+    /* Align the icon vertically */
+}
+
+#toggleBtn {
+    position: absolute;
+    right: 10px;
+    z-index: 101;
+    width: 100px;
+    font-size: 13px;
+    white-space: nowrap;
+    background: none;
+    top: 14px;
+    width: auto;
+    display: none;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 3px 8px;
+    border: 1px solid rgba(230, 230, 230, 1);
+}
+
+.checkbox-button input:checked+.checkmark+.label-text {
+    color: #2F50A3;
+    font-weight: 600;
+}
+
+
+.checkbox-button:hover {
+    color: #2F50A3;
+}
+
+.checkbox-button:hover .checkmark {
+    border-color: #fff;
+}
+
+/*------------------------------
+DEFAULT STYLING  
+ -------------------------*/
+
+
+
+/*------------------------------
+BUTTON STYLING  
+ -------------------------*/
+.exportVectorBtn {
+    padding: 4px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: var(--f13);
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.btnBlack {
+    color: #FFFFFF;
+    background: #000000 !important;
+}
+
+.iconBTn {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+}
+
+
+.iconBtn1 {
+    width: 15px;
+}
+
+.defBtnStyle {
+    border-radius: 4px;
+    padding: 5px 30px;
+    font-size: var(--f13);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+    cursor: pointer;
+    border: 1px solid #000000 !important;
+}
+
+.btnBlack2 {
+    border-radius: 0;
+    background: #FFF;
+}
+
+.greyBorderBtn img {
+    width: 28px;
+}
+
+.greyBorderBtn {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.backBtn1 img {
+    width: 10px;
+}
+
+.backBtn1 {
+    margin-bottom: 10px;
+    color: var(--grey2);
+    font-size: var(--f14);
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+}
+
+.backBtn1 i {
+    font-size: 23px;
+    color: #5B5B5B;
+}
+
+/*------------------------------
+BUTTON STYLING  
+ -------------------------*/
+
+
+
+
+
+/*------------------------------
+ FONT SIZE  
+ -------------------------*/
+.f12 {
+    font-size: var(--f12);
+}
+
+.f13 {
+    font-size: var(--f13);
+}
+
+.f14 {
+    font-size: var(--f14);
+}
+
+.f15 {
+    font-size: var(--f15);
+}
+
+.f16 {
+    font-size: var(--f16);
+}
+
+.f20 {
+    font-size: var(--f20);
+}
+
+/*------------------------------
+ FONT SIZE  
+ -------------------------*/
+
+
+
+/*------------------------------
+ 3D CONFIGURATOR MODAL 
+ -------------------------*/
+.canvasControls {
+
+    background: none;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.canvasControls .light-controls {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.canvasControls .light-controls input {
+    min-width: 180px;
+    margin: 10px 0;
+}
+
+.canvasControls .background-control {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
+.canvasControls label {
+    font-size: var(--f13);
+}
+
+
+.canvasControls .light-controls label {
+    display: flex;
+}
+
+.canvasControls #bgColorPicker {
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.lightAngle input {
+    background: none;
+}
+
+.angle-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.angle-controls button {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.angle-controls button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.view-angle-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.view-angle-controls button {
+    padding: 4px 16px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: var(--f13);
+    cursor: pointer;
+}
+
+.view-angle-controls button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+
+.cursor-active {
+    cursor: url('plus-cursor.png'), auto;
+}
+
+.cursor-active::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.308);
+    cursor: crosshair;
+    z-index: 10001;
+}
+
+.cursor-active::before {
+    content: "Place Text By Clicking on Area You want to Place";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 10px;
+    width: 180px;
+    background: #CB1948;
+    z-index: 10002;
+    color: #FFF;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    transition: 0.1s;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.cursor-active {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+.cursor-active {
+    position: relative;
+}
+
+/*------------------------------
+ 3D CONFIGURATOR MODAL 
+ -------------------------*/
+
+
+/*------------------------------
+COLORS 
+-------------------------*/
+.white1 {
+    color: var(--white1);
+}
+
+.black2 {
+    color: var(--black2);
+}
+
+.blue1 {
+    color: var(--blue1);
+}
+
+.grey2 {
+    color: var(--grey2);
+}
+
+.grey1 {
+    color: var(--grey1);
+}
+
+.black1 {
+    color: var(--black1);
+}
+
+.teal {
+    background: #007C7C;
+}
+
+.black {
+    background: #1C1C1C;
+}
+
+
+
+.whitebg {
+    background: #FFFFFF;
+    border: 1px solid #20202054;
+}
+
+/*------------------------------
+COLORS 
+-------------------------*/
+
+
+/* CUSTOM COLORS NEW */
+
+/* OUR PALLET  */
+
+/* Greens */
+.forestGreen {
+    background: #006B3F;
+}
+
+.darkGreen {
+    background: #154734;
+}
+
+.dallasGreen {
+    background: #007A33;
+}
+
+.universityRed {
+    background: #C41E3A;
+}
+
+.varsityGold {
+    background: #FFD700;
+
+}
+
+.kellyGreen {
+    background: #4C9F38;
+}
+
+.neonGreen {
+    background: #78D64B;
+}
+
+.missionGreen {
+    background: #66B032;
+}
+
+.tealBlue {
+    background: #007398;
+}
+
+.purple {
+    background: #582C83;
+}
+
+.whiteSmoke {
+    background: #F5F5F5;
+}
+
+.coolGrey {
+    background: #8C92AC;
+}
+
+.tangerine {
+    background: #FFA500;
+}
+
+.brightYellow {
+    background: #FFF700;
+}
+
+.peach {
+    background: #FFDAB9;
+}
+
+.bubblegum {
+    background: #FFC1CC;
+}
+
+.babyPink {
+    background: #F4C2C2;
+}
+
+.lavender {
+    background: #E6E6FA;
+}
+
+.skyBlue {
+    background: #87CEEB;
+}
+
+.midnightBlue {
+    background: #191970;
+}
+
+.electricBlue {
+    background: #7DF9FF;
+}
+
+/* Blues */
+.powderBlue {
+    background: #9BCBEB;
+}
+
+.oceanBlue {
+    background: #007BA7;
+}
+
+.columbiaBlue {
+    background: #B9D9EB;
+}
+
+.tealBlue {
+    background: #008080;
+}
+
+.varsityRoyal {
+    background: #3A5DAE;
+}
+
+.darkRoyal {
+    background: #00205B;
+}
+
+.proBlue {
+    background: #1C2D8C;
+}
+
+.alaskaBlue {
+    background: #00AEEF;
+}
+
+.lightPurple {
+    background: #8E7CC3;
+}
+
+.kingsPurple {
+    background: #3F2A56;
+}
+
+.indigoPurple {
+    background: #330072;
+}
+
+/* Reds & Oranges */
+.indianaRed {
+    background: #862633;
+}
+
+.scarletRed {
+    background: #C8102E;
+}
+
+.burntOrange {
+    background: #BF5700;
+}
+
+.neonOrange {
+    background: #FF5F00;
+}
+
+.brightOrange {
+    background: #FF6A13;
+}
+
+/* Yellows & Golds */
+.yellow {
+    background: #FFD100;
+}
+
+.vegasGold {
+    background: #C5B358;
+}
+
+.dustGold {
+    background: #B4975A;
+}
+
+.nuggetGold {
+    background: #DAA520;
+}
+
+.michiganMaze {
+    background: #FFCB05;
+}
+
+/* Pinks & Maroons */
+.hotPink {
+    background: #FF69B4;
+}
+
+.maroon {
+    background: #800000;
+}
+
+/* Creams & Greys */
+.cream {
+    background: #F4EBD0;
+}
+
+.vintageCream {
+    background: #EFE1B9;
+}
+
+.modGrey {
+    background: #B7B1A9;
+}
+
+.proGrey {
+    background: #999999;
+}
+
+.silver {
+    background: #C0C0C0;
+}
+
+/* Neutrals */
+.white {
+    background: #FFFFFF;
+}
+
+.altuva {
+    background: #101820;
+}
+
+.black {
+    background: #000000;
+}
+
+/* OUR PALLET  */
+/* CUSTOM COLORS NEW */
+
+
+
+
+
+
+/*------------------------------
+HEADER STARTS
+-------------------------*/
+.Header {
+    padding: 15px 20px;
+    box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.1);
+    background: #FFFFFF;
+    position: sticky;
+    transition: .3s ease;
+    top: 0;
+    z-index: 10001;
+
+}
+
+.Header .BrandLogo img {
+    width: 180px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.Header .RightSide img {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+.upperTabsPageHistory {
+    background: var(--black1);
+    padding: 0;
+}
+
+.upperTabsPageHistory .line {
+    width: 4vw;
+    height: 1px;
+    background: #FFF;
+}
+
+.upperTabsPageHistory ul {
+    padding: 10px 30px;
+    margin: auto;
+    justify-content: center;
+}
+
+.upperTabsPageHistory ul li {
+    list-style: none;
+}
+
+.upperTabsPageHistory ul li a {
+    color: #777777;
+    font-size: 11px;
+    white-space: nowrap;
+    font-family: var(--font2);
+
+}
+
+.upperTabsPageHistory ul li .activePage {
+    color: var(--white1);
+}
+
+/*------------------------------
+HEADER ENDS  
+-------------------------*/
+
+
+/*------------------------------
+HEADER2 STARTS
+-------------------------*/
+.header2 .navLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.header2 .navLinks a {
+    color: var(--black2);
+    font-family: var(--font2);
+    font-size: var(--f14);
+}
+
+.header2 .grid3 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/*------------------------------
+HEADER2 STARTS
+-------------------------*/
+
+
+/*------------------------------
+footer_main STARTS
+-------------------------*/
+.footer_main {
+    background: #050505;
+    padding: 60px 0 0 0;
+}
+
+.footer_main .grid4 {
+    gap: 30px;
+    grid-template-columns: repeat(4, auto);
+}
+
+.footer_main .icon1 {
+    width: 18px;
+}
+
+.footer_main .footLinksHeading {
+    color: var(--white1);
+    min-height: 50px;
+    font-size: var(--f14);
+    font-family: var(--font2);
+}
+
+.footer_main .spanSocialLinks,
+.footer_main .spanContact {
+    height: 100%;
+}
+
+.footer_main .links a {
+    color: var(--white1);
+    font-size: var(--f14);
+    font-weight: 200;
+}
+
+.footer_main .brandImg {
+    width: 60%;
+}
+
+
+.FooterBottom {
+    border-top: 1px solid #1D1D1D;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-top: 60px;
+    border-top: 0.5px solid var(--white1);
+}
+
+.FooterBottom a {
+    text-decoration: underline !important;
+}
+
+/*------------------------------
+FOOTER_MAIN ENDS 
+-------------------------*/
+
+
+
+
+/*------------------------------
+3d CONFIGURATOR STARTS HERE
+-------------------------*/
+.homeMainContainer {
+    padding: 0;
+    height: 100%;
+    scrollbar-width: none;
+}
+
+.homeMainContainer .arrowdirection img {
+    position: absolute;
+    bottom: 70px;
+    text-align: center;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.homeMainContainer .arrowdirection img {
+    width: 500px;
+}
+
+.defaultScreen .sideBarMain {
+    padding-right: 0;
+    background: #FCFCFC;
+    padding: 20px;
+}
+
+.saveChangeDiv {
+    border: 1px solid #D1D1D1;
+    height: 100%;
+    display: flex;
+    padding: 16px 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.saveChangeDiv .flex_items {
+    color: #000;
+    padding: 10px;
+    font-size: var(--f14);
+}
+
+
+.saveChangeDiv .blueBtn {
+    background: var(--blue1);
+    padding: 10px;
+    color: #FFF;
+    gap: 20px;
+    font-size: var(--f14);
+}
+
+.saveChangeDiv .d-flex .blueBtn img {
+    width: 15%;
+}
+
+.saveChangeDiv .flexRow figure {
+    width: 30px;
+    margin: 0;
+}
+
+.saveChangeDiv .flexRow img {
+    width: 18px;
+}
+
+.homeMainContainer #controls,
+.ConfiguratorMain #controls {
+    position: absolute;
+    top: 30%;
+    right: 35px;
+    display: flex;
+    flex-direction: column;
+    background: #FCFCFC;
+    border-radius: 30px;
+    padding: 40px 10px;
+    gap: 15px;
+}
+
+.homeMainContainer .footSec {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 15px;
+    padding: 10px;
+}
+
+.homeMainContainer #controls button,
+.ConfiguratorMain #controls button {
+    border: none;
+    padding: 0;
+}
+
+.homeMainContainer #controls button img,
+.ConfiguratorMain #controls button img {
+    height: 35px;
+    width: 35px;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 7px;
+}
+
+.homeMainContainer #controls button figure,
+.ConfiguratorMain #controls button figure {
+    margin: 0;
+}
+
+/*------------------------------
+3d CONFIGURATOR STARTS HERE
+-------------------------*/
+
+
+
+/*------------------------------
+sidebar_tabs STARTS HERE
+-------------------------*/
+.sidebarTabs {
+    display: grid;
+    max-height: 50%;
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
+    /* scrollbar-width: none; */
+}
+
+.sideBarMain .nav-pills .nav-item {
+    padding: 20px 10px;
+    width: 100% !important;
+}
+
+.sideBarMain .nav-item.active {
+    background: #FFFFFF;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+}
+
+
+
+.sideBarMain .tabSec {
+    position: relative;
+    display: grid;
+    gap: 0;
+    height: 90vh;
+    grid-template-columns: 150px auto;
+    background: #F4F4F4;
+    scrollbar-width: none;
+
+}
+
+.sideBarMain .sidebar_tabs .tabsImgIcon {
+    width: 24px;
+    height: 24px;
+    margin: 0 7px;
+    object-fit: cover;
+}
+
+.sideBarMain .nav-item.active::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: #FFF;
+}
+
+/* sidebar_content */
+
+
+.sidebar_content {
+    /* border: 1px solid #ccc; */
+    /* background: var(--white1); */
+    height: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+    width: 100%;
+    padding: 0 1vw 1vw 1vw;
+    border-radius: 4px 4px 4px 0;
+}
+
+.contentHeader {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+
+.sidebarFooter {
+    z-index: 100;
+    /* box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 15px; */
+    border: 1px solid #D1D1D1;
+    padding: 10px;
+    grid-column: span 2;
+    height: 100%;
+    min-width: 550px;
+}
+
+.sidebarFooter .offerBadge p {
+    background: rgba(207, 247, 211, 1);
+    color: green;
+    padding: 2px 10px;
+    border: 1px solid green;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sidebarFooter span {
+    font-size: 13px;
+}
+
+.contentHeader h6 {
+    margin: auto 0;
+    color: #393636;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/* sidebar_content */
+
+
+/*-----------------------------------------
+-----------------------------
+DESIGNS SCREEN  01
+----------------------------------------
+----------------------------- */
+.designsItems:active,
+.designsItems:focus-visible,
+.designsItems:focus {
+    border: 2px solid #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.designsItems.active {
+    border: 1px solid #050505;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.04);
+    background: #05050500;
+}
+
+.designsItems.active img {
+    opacity: 0.9;
+}
+
+.designsItems figure {
+    margin: auto 0;
+    text-align: center;
+}
+
+.designsItems img {
+    width: 94%;
+    object-fit: cover;
+}
+
+.designsItems {
+    width: calc(100% - 10px);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 3px 8px;
+    border: 1px solid rgba(230, 230, 230, 1);
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 170px;
+    margin: 5px 0;
+    display: flex;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    justify-content: center;
+}
+
+/*-----------------------------------------
+-----------------------------
+DESIGNS SCREEN 
+----------------------------------------
+----------------------------- */
+
+
+
+/*-----------------------------------------
+-----------------------------
+COLORS SCREEN 
+----------------------------------------
+----------------------------- */
+.defSection {
+    margin: 20px 0;
+}
+
+.gradientColorAdjust .colorBox {
+    box-shadow: rgba(0, 0, 0, 0) 0px 3px 8px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #5555551c;
+    border-radius: 4px;
+}
+
+.palette {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.color-palette {
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+
+
+.gradient-palette {
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.gradient-palette label {
+    width: 40px !important;
+    height: 40px;
+    margin: 0 !important;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.titlePrimary {
+    background: #D9D9D9;
+    margin: 10px 0;
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+
+#colorsContent .MeshFaceColorPalette .title {
+    margin-top: 0 !important;
+    background: #D9D9D9;
+    margin: 10px 0;
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/*-----------------------------------------
+-----------------------------
+COLORS SCREEN 
+----------------------------------------
+----------------------------- */
+
+
+
+/*-----------------------------------------
+-----------------------------
+PATTERN SCREEN 
+----------------------------------------
+----------------------------- */
+.checkbox-button {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px 5px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 4px;
+    background-color: rgb(248, 249, 250);
+    color: var(--grey2);
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: var(--f13);
+    gap: 5px;
+    background: #FFFFFF;
+
+}
+
+.btnBlack input:checked+.checkmark+.label-text {
+    color: #FFF !important;
+}
+
+.btnBlack input {
+    display: none;
+}
+
+#dynamicPatternForm {
+    margin-bottom: 20px;
+}
+
+.patternImagesArea {
+    padding: 1vw;
+    border-radius: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.patternImagesArea img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* .defItems {
+    padding: 10px;
+    border: 1px solid #D3D3D3;
+    border-radius: 4px;
+    margin-bottom: 10px;
+} */
+.defImgDecalItems,
+.defTextDecalItems {
+    display: grid;
+    grid-template-columns: 70px auto;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.defImgDecalItems label,
+.defTextDecalItems label {
+    margin: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.defImgDecalItems .imgControl,
+.defTextDecalItems .textControl {
+    display: grid;
+    grid-template-columns: 75% auto;
+    border: 1px solid #DDDDDD;
+    padding: 5px 0 5px 15px;
+    gap: 15px;
+}
+
+.defImgDecalItems .imgControl span,
+.defTextDecalItems .textControl span {
+    border-left: 1px solid #DDDDDD;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/*-----------------------------------------
+-----------------------------
+PATTERN SCREEN 
+----------------------------------------
+----------------------------- */
+
+
+
+
+/*-----------------------------------------
+-----------------------------
+TEXT DECAL SCREEN  
+----------------------------------------
+----------------------------- */
+.decalsPlacementsMeshes {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(230, 230, 230, 1);
+}
+
+.decalsPlacementsMeshes .placement-header {
+    white-space: nowrap;
+}
+
+.selectArea {
+    position: relative;
+    z-index: 10003;
+    gap: 10px;
+}
+
+.selectArea button {
+    padding: 10px 0;
+}
+
+.selectArea figure {
+    margin: 0;
+}
+
+.selectArea figure img {
+    width: 100px;
+}
+
+.decalsPlacementsMeshes button {
+    background: #ECECEC73;
+    border: 1px dotted #1C1C1C;
+    font-size: 13px;
+    transition: 2s ease-in-out;
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.input-container input {
+    width: 100%;
+    margin: 10px 0 20px;
+    padding: 5px 15px;
+    border: 1px solid rgba(221, 221, 221, 1);
+}
+
+.input-container {
+    border-bottom: 1px solid rgba(221, 221, 221, 1);
+    padding: 0 0 20px 0;
+    margin: 10px 0;
+}
+
+.input-container label {
+    margin: 10px 0;
+    width: 100%;
+    font-size: var(--f13);
+}
+
+.textMeshesItems {
+    padding: 15px;
+    border: 1px solid #DCE2F0;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+/* .deleteDecalIcon {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 15px;
+    margin: 0;
+    padding: 0;
+    width: auto !important;
+} */
+
+.textMeshesItems .bottomLeftButton img {
+    width: 15px;
+
+}
+
+.controlsBtn {
+    background: no-repeat;
+    border: 1px solid #363636;
+    width: 30px;
+    height: 28px;
+    padding: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+.imgIconBTn {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.controlItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+
+.controlItems h6 {
+    margin-bottom: 0;
+}
+
+.controlsTitle1 {
+    font-size: var(--f15);
+
+}
+
+.controlsTitle2 {
+    font-size: 20px;
+
+}
+
+
+.textFontFamily select {
+    width: 100%;
+    background: #FFFFFF;
+    cursor: pointer;
+    font-size: var(--f13);
+    border: none;
+}
+
+.chooseTextTransform span {
+    border: 1px solid rgba(221, 221, 221, 1);
+    padding: 3px 5px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.chooseTextTransform .styleArea {
+    gap: 5px !important;
+}
+
+.textDecalThirdScreen .controlItems h6 {
+    font-size: var(--f14);
+}
+
+.textDecalThirdScreen .contentHeader {
+    flex-direction: row;
+}
+
+/* .ResizePatterHandle {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+} */
+
+
+/*-----------------------------------------
+-----------------------------
+TEXT DECAL SCREEN  
+----------------------------------------
+----------------------------- */
+
+
+
+/*-----------------------------------------
+-----------------------------
+GRADIENT SCREEN  
+----------------------------------------
+----------------------------- */
+.gradientSecondScreen .goBAckBtn {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    white-space: nowrap;
+    z-index: 101;
+
+}
+
+/*-----------------------------------------
+-----------------------------
+IMAGE DECAL SCREEN 
+----------------------------------------
+----------------------------- */
+#dynamicImageMeshButtons button:hover {
+    background: #f0f0f0;
+}
+
+#dynamicImageMeshButtons button.active {
+    border-color: #0066ff;
+    background: #e6f0ff;
+}
+
+/* .uploadLogoMainDiv {
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+} */
+
+#logoContent .uploadLogoForm {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 0;
+    cursor: pointer;
+    height: 100px;
+}
+
+.activeImgLogos {
+    margin-top: 30px;
+}
+
+.activeImgLogos .logosItems {
+    box-shadow: 2px 2px 8.01px 0px #00000033;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.activeImgLogos .logoPosition {
+    color: grey1;
+    font-size: var(--f14);
+}
+
+.activeImgLogos .mainLogo {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.activeImgLogos .mainLogo img {
+    max-width: 130px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.custom-file-input {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: 100%;
+    border-radius: 4px;
+    border: 2px dotted #999999;
+
+}
+
+.custom-file-input input[type="file"] {
+    display: none;
+}
+
+.custom-file-label {
+    cursor: pointer;
+    display: flex;
+    color: #333333;
+    align-items: center;
+    position: absolute;
+    z-index: 10001;
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+}
+
+.custom-file-label::before {
+    content: 'Select File';
+    margin-right: 10px;
+}
+
+.custom-file-input button.submitFrom {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #FFFFFF;
+    min-width: 130px;
+    position: absolute;
+    border-radius: 2px;
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 4px 0px #00000033;
+    z-index: 10;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-file-label::before {
+    content: 'Select File';
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* space between icon and text */
+    background-image: url('../images/icons/uploadGrey.png');
+    /* your icon path */
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    /* adjust size */
+    background-position: left center;
+    padding-left: 24px;
+    /* add space so text doesn't overlap icon */
+}
+
+/* .custom-file-label::after {
+    content: 'Browse';
+    background: #1C1C1C;
+    border: none;
+    color: #FFF;
+    border-radius: 4px;
+    padding: 8px 25px;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+} */
+
+#uploadedImagePreview {
+    object-fit: contain;
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto;
+}
+
+.UploadImgArea {
+    /* position: relative; */
+    margin: 20px 0 auto 0;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    height: 150px;
+    border-radius: 4px;
+    background: #EEEEEE78;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.uploadImgPreview {
+    max-width: 100%;
+    max-height: 150px;
+    margin: 10px auto;
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+    display: none;
+    /* Hidden by default */
+}
+
+
+/* #logoContent button {
+    background: none;   
+    border: none; 
+} */
+
+#logoSecondScreen {
+    margin-bottom: 10px;
+}
+
+#logoSecondScreen .backToFirstScreen {
+    display: flex;
+    justify-content: space-between;
+}
+
+#logoSecondScreen .custom-file-input {
+    border: none;
+}
+
+#logoSecondScreen #applyLogoButton {
+    background: #1C1C1C;
+    line-height: 0;
+    height: 40px;
+    color: #FFF;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #1C1C1C;
+}
+
+.noteText {
+    font-size: 14px;
+    color: #1E1D24;
+    background: #eee;
+    padding: 8px;
+}
+
+/*-----------------------------------------
+-----------------------------
+IMAGE DECAL SCREEN 
+----------------------------------------
+----------------------------- */
+
+
+
+
+/*-----------------------------------------
+-----------------------------
+ADD ROASTER PAGE 
+----------------------------------------
+----------------------------- */
+.AddRoasterMAin {
+    padding: 100px 20px;
+}
+
+.AddRoasterMAin .head h5 {
+    font-family: var(--font2);
+    font-size: var(--f16);
+}
+
+.AddRoasterMAin .head p {
+    color: #444444;
+    font-size: var(--f14);
+}
+
+.AddRoasterMAin .saveButton {
+    background: #274183;
+    padding: 8px;
+    border: none;
+    color: #FFF;
+    font-size: 14px;
+    text-transform: capitalize;
+    display: block;
+    text-align: center;
+}
+
+.AddRoasterMAin input {
+    height: 35px;
+}
+
+.AddRoasterMAin #addRowButton {
+    background: #FFFFFF;
+    padding: 8px;
+    border: none;
+}
+
+.AddRoasterMAin .deleteRowButton {
+    border: none;
+    background: none;
+}
+
+.AddRoasterMAin .roasterDetailsTable {
+    margin: 20px 0;
+}
+
+.AddRoasterMAin .roasterDetailsTable tbody {
+    background: #F9F9F9;
+}
+
+
+
+.AddRoasterMAin .roasterDetailsTable select,
+.AddRoasterMAin .roasterDetailsTable select option {
+    cursor: pointer !important;
+}
+
+.AddRoasterMAin .roasterDetailsTable td,
+.AddRoasterMAin .roasterDetailsTable th {
+    font-size: 14px !important;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.AddRoasterMAin .additionItems {
+    padding: 20px 0 40px;
+}
+
+.AddRoasterMAin .additionItems h5 {
+    font-size: var(--f16);
+    font-family: var(--font2);
+    padding: 10px 0;
+}
+
+.AddRoasterMAin .singleItems {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #EEEEEE;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #000000;
+    border-radius: 4px;
+}
+
+.AddRoasterMAin .singleItems input {
+    height: 25px;
+}
+
+.AddRoasterMAin .downloadBlue {
+    background: #111111;
+    color: #FFF;
+}
+
+.AddRoasterMAin .uploadBlue {
+    background: #EEEEEE;
+    color: #000000;
+    border: 1px dotted #FFF;
+
+}
+
+.AddRoasterMAin .uploadRosterDetails .btn-sm {
+    font-size: var(--f13);
+    padding: 5px 10px;
+    font-weight: 500;
+    margin: 10px 0;
+
+
+}
+
+.AddRoasterMAin .uploadRosterDetails .btn-sm:hover {
+    border: 1px dotted #274183;
+}
+
+.AddRoasterMAin .rosterHelperBtn button {
+    border: 1px solid #BAC2D7;
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.AddRoasterMAin .rosterHelperBtn .sizeGuard {
+    border: none;
+    background: no-repeat;
+    border-bottom: 1px solid #000000;
+    border-radius: 0;
+    padding: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#roasterSizeChartModal .modal-dialog {
+    max-width: 700px;
+}
+
+#roasterSizeChartModal .close {
+    position: absolute;
+    right: 20px;
+    background: #eee;
+    top: 20px;
+    border: none;
+    padding: 0 10px;
+    width: 30px;
+    height: 30px;
+}
+
+/*-----------------------------------------
+-----------------------------
+ADD ROASTER PAGE
+----------------------------------------
+----------------------------- */
+
+
+
+
+/*-----------------------------------------
+-----------------------------
+ADD REVIEW DETAILS MAIN PAGE
+----------------------------------------
+----------------------------- */
+
+.ReviewDetailsMain {
+    padding: 80px 50px;
+}
+
+
+
+.ReviewDetailsMain .items .designImg {
+    width: 120px;
+    height: 120px;
+    background: #F9F9F9;
+}
+
+.ReviewDetailsMain .items .threeDots img {
+    width: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.ReviewDetailsMain .items .threeDots {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.ReviewDetailsMain .items .threeDots .deleteButton {
+    padding: 8px 30px;
+    box-shadow: 0px 0px 8px 0px #00000026;
+    border: 1px solid #DDDDDD;
+    transform: translateY(20px);
+    font-size: 14px;
+}
+
+.ReviewDetailsMain .items {
+    padding: 20px;
+    position: relative;
+    border: 1px solid #DDDDDD
+}
+
+
+/*-----------------------------------------
+-----------------------------
+GENERATE_PO MAIN PAGE
+----------------------------------------
+----------------------------- */
+.generatePO {
+    padding: 50px;
+}
+
+.generatePO .innerDiv {
+    margin-bottom: 40px;
+}
+
+.generatePO .upperHead .logo img {
+    width: 180px;
+
+}
+
+.generatePO .upperHead {
+    border-bottom: 4px solid #000000;
+    width: 100%;
+    padding: 20px 0;
+}
+
+
+
+.generatePO .stepNavigate h6 {
+    font-size: var(--f16);
+    font-weight: 600;
+}
+
+.generatePO .stepNavigate .styleName {
+    color: #444444;
+    font-size: var(--f15);
+    font-weight: 500;
+}
+
+.generatePO .modelAngleView img {
+    width: 100%;
+}
+
+.generatePO .modelAngleView {
+    background: #F4F4F4;
+    padding: 20px;
+}
+
+.customizedModel .allFourAngles {
+    background: #F4F4F4;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.customizedModel .allFourAngles h6 {
+    font-size: var(--f16);
+    font-family: var(--font2);
+}
+
+.generatePO .tableArea table {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.generatePO .tableArea th {
+    background: #333333;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+}
+
+
+
+.generatePO .step3 .tableArea th,
+.generatePO .step3 .tableArea td {
+    text-align: center;
+}
+
+.generatePO .tableArea .tableFor {
+    background: #333333;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.generatePO .tableArea .thead2 th {
+    background: #DDDDDD;
+    color: #000000;
+}
+
+.generatePO .stepsItems {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.generatePO .tableArea td {
+    padding: 15px 5px !important;
+    font-size: var(--f14);
+    vertical-align: middle;
+}
+
+.generatePO .LogoPlacement img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+
+.generatePO .tableArea td h6 {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.generatePO .tableArea tbody tr {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.generatePO .tableArea td .tableDataStyle2 {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin: auto 0;
+}
+
+.generatePO .tableDataStyle2 .colorArea {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.generatePO .tableArea td h6 span {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+
+}
+
+.generatePO .tableArea .ColorApply {
+    background: #D9D9D9;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.generatePO .tableArea tfoot td {
+    text-align: left !important;
+    background: #DDDDDD;
+    font-weight: 600;
+    padding-left: 20px !important;
+}
+
+/*-----------------------------------------
+-----------------------------
+GENERATE_PO MAIN PAGE
+----------------------------------------
+----------------------------- */
+
+
+
+
+
+/*-----------------------------------------
+-----------------------------
+HOME BANNER STARTS FROM HERE
+----------------------------------------
+----------------------------- */
+.homeBanner {
+    background: url('../images/main/Hero_Bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px;
+    height: 80vh;
+}
+
+.homeBanner .bannerContent {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    color: #FFF;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.homeBanner .bannerContent .bannerTitle {
+    font-family: var(--font2);
+    font-size: 52px;
+}
+
+.homeBanner .defBtnStyle {
+    background: var(--blue1);
+    color: var(--white1);
+    font-family: var(--font2);
+}
+
+
+/*-----------------------------------------
+-----------------------------
+HOME BANNER ENDS HERE
+----------------------------------------
+----------------------------- */
+
+
+
+
+/*-----------------------------------------
+----------------------------- 
+ABOUT CONFIGURATOR
+----------------------------------------
+----------------------------- */
+
+
+.aboutConfigurator {
+    background: #FAFAFA;
+    height: 60vh;
+}
+
+.aboutConfigurator .contentSide h4 {
+    font-family: var(--font2);
+    font-size: 24px;
+    line-height: 40px;
+}
+
+
+
+.aboutConfigurator .contentSide .innerDiv {
+    padding: 10vw;
+    line-height: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutConfigurator .listStyle1 li {
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-content: center;
+    margin: auto 0;
+    gap: 10px;
+    font-size: var(--f16);
+    margin: 15px 0;
+    color: var(--black1);
+}
+
+.aboutConfigurator .contentSide .icon2 {
+    width: 22px;
+}
+
+.aboutConfigurator .listStyle1 li figure {
+    margin: 0;
+}
+
+.aboutConfigurator .rightVideoSide img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+
+}
+
+.aboutConfigurator .video-container button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: none;
+}
+
+.aboutConfigurator .video-container button img {
+    width: 50px;
+}
+
+.aboutConfigurator .video-container video {
+    height: 60vh;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+}
+
+.video-thumbnail {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    display: block;
+}
+
+.video-thumbnail button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/*-----------------------------------------
+----------------------------- 
+ABOUT CONFIGURATOR
+----------------------------------------
+----------------------------- */
+
+
+
+
+
+/*-----------------------------------------
+----------------------------- 
+SECTION HEADER
+----------------------------------------
+----------------------------- */
+
+.sectionHeader {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.sectionHeader .sectionTitle {
+    font-size: 24px;
+    font-family: var(--font2);
+}
+
+.sectionHeader .sectionDesc {
+    color: var(--grey1);
+    font-size: var(--f16);
+}
+
+/*-----------------------------------------
+----------------------------- 
+SECTION HEADER
+----------------------------------------
+----------------------------- */
+
+
+
+
+/*-----------------------------------------
+----------------------------- 
+  DESIGNS COLLECTIONS
+----------------------------------------
+----------------------------- */
+.designCollection {
+    padding: 100px 20px;
+    background: #FFFFFF;
+}
+
+.designCollection .allDesigns .AllDesignsItems {
+    background: #F8F8F8;
+    text-align: center;
+    margin: 0.6vw;
+    border: 1px solid #DDDDDD;
+
+}
+
+.designCollection .allDesigns .AllDesignsItems:hover {
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #274183 100%);
+    transform: translateY(-5px);
+}
+
+.designCollection .allDesigns .AllDesignsItems .iconBTn img {
+    display: none;
+}
+
+.designCollection .allDesigns .AllDesignsItems:hover .designName a {
+    color: #FFF;
+}
+
+.designCollection .allDesigns .AllDesignsItems:hover .iconBTn img {
+    transition: 1s ease;
+    display: block;
+}
+
+.designCollection .allDesigns .AllDesignsItems:hover .designName {
+    background: none;
+}
+
+.designCollection .allDesigns .AllDesignsItems .designImg img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: contain;
+    margin: auto;
+}
+
+.designCollection .allDesigns .AllDesignsItems .designName a {
+    padding: 15px 5px;
+    font-family: var(--font2);
+    color: var(--black2);
+    font-size: var(--f14);
+}
+
+.designCollection .allDesigns .AllDesignsItems .designName {
+    background: #E6E6E6;
+
+}
+
+/*-----------------------------------------
+----------------------------- 
+  DESIGNS COLLECTIONS
+----------------------------------------
+----------------------------- */
+
+
+
+
+/*-----------------------------------------
+----------------------------- 
+HIGHLIGHTS HOME
+----------------------------------------
+----------------------------- */
+.highlights {
+    background: url(../images/main/highlightSecBg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    min-height: 30vh;
+    margin-top: 40px;
+}
+
+.highlights .highlightsItems {
+    display: flex;
+    align-items: center;
+    color: var(--white1);
+}
+
+.highlights .highlightsItems img {
+    width: 40px;
+}
+
+.highlights .highlightsItems h6 {
+    font-size: var(--white1);
+    margin: auto 0;
+    font-size: var(--f16);
+    font-family: var(--font2);
+}
+
+
+/*-----------------------------------------
+----------------------------- 
+HIGHLIGHTS HOME
+----------------------------------------
+----------------------------- */
+
+
+
+/*-----------------------------------------
+----------------------------- 
+HIGHLIGHTS HOME
+----------------------------------------
+----------------------------- */
+.whyCustomBuilder {
+    background: url(../images/main/whyCustomBuilderBg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px;
+    min-height: 30vh;
+}
+
+.whyCustomBuilder .innerDiv {
+    border: 1px solid #DDDDDD;
+    position: relative;
+}
+
+
+.whyCustomBuilder .innerItems h6 {
+    font-family: var(--font2);
+    margin: auto 0;
+
+}
+
+.whyCustomBuilder .innerItems p {
+    margin: auto 0;
+}
+
+.whyCustomBuilder .innerItems {
+    padding: 20px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.whyCustomBuilder .insideInnerMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    gap: 10px;
+}
+
+.whyCustomBuilder .center .insideInnerMain img {
+    width: 18vw;
+
+}
+
+.whyCustomBuilder .borderBottomImg {
+    position: absolute;
+    bottom: -10px;
+    margin: 0;
+    width: 100%;
+    left: 0;
+}
+
+/*-----------------------------------------
+----------------------------- 
+HIGHLIGHTS HOME
+----------------------------------------
+----------------------------- */
+
+
+
+
+/*-----------------------------------------
+----------------------------- 
+HOW IT WORKS
+----------------------------------------
+----------------------------- */
+.howItWorks {
+    padding: 100px;
+    margin: 80px 0;
+}
+
+.howItWorks .worksSteps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.howItWorks .stepsDiv img {
+    width: 46px;
+}
+
+.howItWorks h6 {
+    font-family: var(--font2);
+}
+
+.howItWorks .workStepsItems {
+    padding: 20px;
+    border: 1px solid #DDDDDD;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 4px;
+    width: 220px;
+    height: 180px;
+    position: relative;
+}
+
+.howItWorks .workStepsItems::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url('../images/main/stepsUpper.png');
+    background-size: 100% 100%;
+    background-position: 0 0;
+    height: 50px;
+}
+
+.howItWorks .workStepsItems img {
+    width: 48px;
+    height: 48px;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+
+/*-----------------------------------------
+----------------------------- 
+HOME MARQUEE
+----------------------------------------
+----------------------------- */
+.homeMarquee {
+    background: #111111;
+    padding: 20px;
+    margin: 40px 0;
+}
+
+.marqueeContainer {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.marqueeTrack {
+    display: inline-flex;
+    animation: scrollMarquee 30s linear infinite;
+    gap: 50px;
+}
+
+.marqueeItems {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 40px;
+}
+
+.marqueeItems img {
+    width: 40px;
+}
+
+.marqueeItems figure,
+.marqueeItems h6 {
+    margin: 0;
+    font-family: var(--font2);
+    font-size: 3 0px;
+    color: var(--white1);
+}
+
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/*-----------------------------------------
+----------------------------- 
+HOME MARQUEE
+----------------------------------------
+----------------------------- */
+
+
+
+/*-----------------------------------------
+----------------------------- 
+CUSTOMIZE START HOME FOOTER UPPER
+----------------------------------------
+----------------------------- */
+.FooterUpperCustomize {
+    padding: 50px;
+}
+
+.FooterUpperCustomize .defBtnStyle {
+    background: var(--blue1);
+    color: var(--white1);
+    font-family: var(--font2);
+}
+
+.FooterUpperCustomize .contentSide .innerDiv {
+
+    padding: 40px;
+}
+
+.FooterUpperCustomize .innerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+}
+
+.FooterUpperCustomize h5 {
+    font-family: var(--font2);
+}
+
+.FooterUpperCustomize p {
+    font-size: var(--f16);
+}
+
+/*-----------------------------------------
+----------------------------- 
+CUSTOMIZE START HOME FOOTER UPPER
+----------------------------------------
+----------------------------- */
+
+
+
+/*------------------------------
+        CHOOSE_SPORTS_MAIN STARTS
+        -------------------------*/
+.choose_Sports_Main {
+    padding: 50px;
+}
+
+.choose_Sports_Main .sportsItems img {
+    width: 100%;
+    transition: .3s ease-in;
+
+}
+
+.choose_Sports_Main .sportsItems .items:hover {
+    transform: translateY(-8px);
+}
+
+
+
+.choose_Sports_Main .sportsItems {
+    padding: 1vw;
+}
+
+.choose_Sports_Main .sportsItems .items {
+    position: relative;
+    transition: .3s ease-in;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.choose_Sports_Main .sportsItems figure {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 230px;
+    height: 230px;
+    position: relative;
+}
+
+.choose_Sports_Main .sportsItems figure::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #00000078;
+    height: 100%;
+    width: 100%;
+}
+
+.choose_Sports_Main .sportsItems .items:hover figure::after {
+    background: #00000056;
+}
+
+.choose_Sports_Main .sportsItems .sportsTitle {
+    font-family: var(--font2);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #FFF;
+    transition: .3s ease-in;
+    z-index: 1;
+    text-align: center;
+    text-transform: capitalize;
+    transform: translate(-50%, -50%);
+}
+
+/*------------------------------
+        CHOOSE_SPORTS_MAIN ENDS
+        -------------------------*/
+
+/*-----------------------------------------
+-----------------------------
+MEDIA QUERY ----------------------------------------
+----------------------------- */
+
+@media screen and (max-width:1401px) {
+    .homeBanner {
+        height: 65vh;
+    }
+
+    .designCollection .allDesigns .AllDesignsItems .designImg img {
+        width: 20vw;
+        height: 25vh;
+    }
+
+    .designCollection {
+        padding: 80px 20px;
+    }
+
+    .whyCustomBuilder {
+        padding: 120px;
+    }
+
+    .homeBanner .bannerContent .bannerTitle {
+        font-size: 45px;
+    }
+
+    .howItWorks {
+        margin: 50px 0;
+    }
+
+    .aboutConfigurator .contentSide .innerDiv {
+        line-height: 20px;
+    }
+
+    .howItWorks {
+        padding: 55px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .homeBanner {
+        height: 52vh;
+    }
+
+    .homeBanner .bannerContent .bannerTitle {
+        font-size: 35px;
+    }
+
+    .aboutConfigurator .contentSide .innerDiv {
+        padding: 5vw;
+    }
+
+    .aboutConfigurator .contentSide h4 {
+        line-height: 35px;
+    }
+
+    .sectionHeader .sectionDesc {
+        font-size: var(--f14);
+    }
+
+    .designCollection .allDesigns .AllDesignsItems .designImg img {
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .highlights {
+        padding: 0;
+    }
+
+    .highlights .highlightsItems h6 {
+        line-height: 25px;
+    }
+
+    .whyCustomBuilder {
+        padding: 55px 45px;
+    }
+
+    .whyCustomBuilder .innerItems p {
+        font-size: var(--f14);
+    }
+
+    .howItWorks .workStepsItems {
+        padding: 10px;
+    }
+
+    .howItWorks .workStepsItems img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .howItWorks .stepsDiv img {
+        width: 30px;
+    }
+
+    .howItWorks h6 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+
+    .sectionHeader .sectionTitle {
+        font-size: 22px;
+        font-family: var(--font2);
+    }
+
+    .homeBanner .bannerContent .bannerTitle {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .Header .BrandLogo img {
+        width: 170px;
+        height: 42px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .Header .BrandLogo img {
+        width: 160px;
+    }
+
+    .aboutConfigurator .contentSide h4 {
+        line-height: 30px;
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .aboutConfigurator {
+        padding: 30px;
+        height: 100%;
+    }
+
+    .aboutConfigurator .contentSide .innerDiv {
+        padding: 5vw 0;
+    }
+
+    .highlights .grid4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .highlights .highlightsItems h6 {
+        line-height: 25px;
+        white-space: nowrap;
+
+    }
+
+    .whyCustomBuilder {
+        padding: 70px 0;
+    }
+
+    .whyCustomBuilder .insideInnerMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .whyCustomBuilder .center .insideInnerMain {
+        grid-column: span 2;
+    }
+}

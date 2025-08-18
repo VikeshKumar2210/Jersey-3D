@@ -1,0 +1,136 @@
+/* 6530 9717 0002 5479 
+04/30*/
+/* 074 */
+@media screen and (max-width:1301px) {
+    .designsItems {
+        min-height: 140px;
+        max-height: 120px;
+        margin: 0;
+    }
+
+    .palette,
+    .gradient-palette label {
+        width: 35px !important;
+        height: 35px;
+    }
+
+    .color-palette,
+    .gradient-palette {
+        padding: 1vw;
+        grid-template-columns: repeat(5, 1fr) !important;
+    }
+
+    .textDecalThirdScreen .chooseTextTransform .styleArea {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .contentHeader h6 {
+
+        font-size: 15px;
+    }
+
+    .checkbox-button .checkmark {
+        width: 12px;
+        height: 12px;
+    }
+
+    .patternArea .checkbox-button input:checked~.checkmark {
+        color: #104A93;
+    }
+
+    .sideBarMain .tabSec {
+        grid-template-columns: 115px auto;
+    }
+
+    .sideBarMain .sidebar_tabs .tabsImgIcon {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px 0 0;
+    }
+
+    .custom-file-label::after {
+        padding: 8px 15px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    .designsItems {
+        min-height: 120px;
+        max-height: 120px;
+    }
+
+    .palette,
+    .gradient-palette label {
+        width: 30px !important;
+        height: 30px;
+    }
+
+    .colorsMeshItems input[type="radio"]:checked+.meshActiveColor {
+        width: 32px;
+        height: 32px;
+    }
+
+    #dynamicPatternForm {
+        gap: 5px;
+    }
+
+    .patternArea .label-text {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .sideBarMain .nav-item .label {
+        font-size: var(--f14);
+    }
+
+    .sideBarMain .tabSec {
+        grid-template-columns: 108px auto;
+    }
+
+    #logoContent .uploadLogoForm {
+        padding: 20px 10px;
+    }
+
+    #controls {
+
+        padding: 40px 5px;
+    }
+}
+
+
+@media screen and (max-width:980px) {
+    .defaultScreen {
+        display: grid;
+        grid-template-columns: 120px auto;
+    }
+
+#toggleBtn {
+    display: block;
+}
+
+    .defaultScreen .sideBarMain,
+    .rightSide {
+
+        width: 100%;
+    }
+ 
+    .sidebar_content {
+        position: absolute;
+        z-index: 100;
+        left: -350px;
+        width: 320px;
+        height: 100%;
+        padding: 2vw;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar_content.active {
+        left: 108px;
+    }
+
+}
