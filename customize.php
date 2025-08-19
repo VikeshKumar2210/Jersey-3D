@@ -30,6 +30,16 @@ if (isset($_GET['subcat'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/jogLogo2.png">
     <style>
+        .messError {
+            border: 1px solid #EAEAEA;
+            padding: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 4px;
+            background: #eee;
+            text-transform: capitalize;
+        }
+
         .appliedDecalsList {
             display: flex;
             flex-direction: column;
@@ -677,6 +687,124 @@ if (isset($_GET['subcat'])) {
         });
     </script>
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const collarForm = document.getElementById("collarForms");
+            const stripeForm = document.getElementById("jerseyStripesForm");
+            const noticeDiv = document.getElementById("chooseCollarNotice");
+
+            // Map collar values to stripe div classes
+            const collarToStripesMap = {
+                collar1: "forTriangleVNeck",
+                collar2: "forTriangleVNeckWithLace",
+                collar3: "forVNeck",
+                collar4: "forTriangleVNeckWithLace",
+                collar5: "forVNeck",
+                collar6: "forTriangleVNeckWithLace"
+            };
+
+            // Hide all stripe groups
+            function hideAllStripes() {
+                stripeForm.querySelectorAll("div").forEach(div => {
+                    div.style.display = "none";
+                });
+            }
+
+            // Show notice and hide stripes
+            function resetToNotice() {
+                hideAllStripes();
+                noticeDiv.style.display = "block";
+            }
+
+            // Listen for collar selection
+            collarForm.querySelectorAll("input[type='checkbox']").forEach(input => {
+                input.addEventListener("change", function() {
+                    // Allow only one collar checkbox at a time
+                    collarForm.querySelectorAll("input[type='checkbox']").forEach(cb => {
+                        if (cb !== this) cb.checked = false;
+                    });
+
+                    hideAllStripes();
+
+                    if (this.checked) {
+                        const targetClass = collarToStripesMap[this.value];
+                        if (targetClass) {
+                            const targetDiv = stripeForm.querySelector("." + targetClass);
+                            if (targetDiv) {
+                                targetDiv.style.display = "grid";
+                                noticeDiv.style.display = "none"; // hide notice
+                            }
+                        }
+                    } else {
+                        resetToNotice(); // if unchecked, show notice again
+                    }
+                });
+            });
+
+            // Default state
+            resetToNotice();
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const collarForm = document.getElementById("collarForms");
+            const styleForm = document.getElementById("jerseyStyleForm");
+            const styleNotice = document.getElementById("chooseCollarForStyleNotice");
+
+            // Map collar values to style div classes
+            const collarToStyleMap = {
+                collar1: "JerseyTriangleVNeck",
+                collar2: "JerseyTriangleVNeckWithLace",
+                collar3: "JerseyVNeckWithoutPatch",
+                collar4: "JerseyTriangleVNeck",
+                collar5: "JerseyPentagon",
+                collar6: "JerseyPentagon"
+            };
+
+            // Hide all style groups
+            function hideAllStyles() {
+                styleForm.querySelectorAll("div").forEach(div => {
+                    div.style.display = "none";
+                });
+            }
+
+            // Reset to notice
+            function resetStyleNotice() {
+                hideAllStyles();
+                styleNotice.style.display = "block";
+            }
+
+            // Watch collar selection
+            collarForm.querySelectorAll("input[type='checkbox']").forEach(input => {
+                input.addEventListener("change", function() {
+                    // only one collar at a time
+                    collarForm.querySelectorAll("input[type='checkbox']").forEach(cb => {
+                        if (cb !== this) cb.checked = false;
+                    });
+
+                    hideAllStyles();
+
+                    if (this.checked) {
+                        const targetClass = collarToStyleMap[this.value];
+                        if (targetClass) {
+                            const targetDiv = styleForm.querySelector("." + targetClass);
+                            if (targetDiv) {
+                                targetDiv.style.display = "grid";
+                                styleNotice.style.display = "none"; // hide notice
+                            }
+                        }
+                    } else {
+                        resetStyleNotice();
+                    }
+                });
+            });
+
+            // Default
+            resetStyleNotice();
+        });
+    </script>
 </head>
 
 <body>
@@ -860,32 +988,34 @@ if (isset($_GET['subcat'])) {
                                                                         <form action="" class="grid3" id="collarForms">
                                                                             <label class="collarItems checkBoxDesign">
                                                                                 <input type="checkbox" name="fabricMaterial[]" value="collar1">
-                                                                                <figure class="my-0"><img src="images/collarDesigns/collar1.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> V-Neck</h6>
+                                                                                <figure class="my-0"><img src="images/collarDesigns/collar01.png" alt=""></figure>
+
+                                                                                <h6 class="fabricName"> Triangle V-Neck</h6>
                                                                             </label>
                                                                             <label class="collarItems checkBoxDesign">
                                                                                 <input type="checkbox" name="fabricMaterial[]" value="collar2">
-                                                                                <figure class="my-0"><img src="images/collarDesigns/collar2.png" alt=""></figure>
+                                                                                <figure class="my-0"><img src="images/collarDesigns/collar02.png" alt=""></figure>
+
                                                                                 <h6 class="fabricName"> Lace Neck with Triangle</h6>
                                                                             </label>
                                                                             <label class="collarItems checkBoxDesign">
                                                                                 <input type="checkbox" name="fabricMaterial[]" value="collar3">
-                                                                                <figure class="my-0"><img src="images/collarDesigns/collar3.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> Triangle V-Neck</h6>
+                                                                                <figure class="my-0"><img src="images/collarDesigns/Collar03.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> V-Neck</h6>
                                                                             </label>
                                                                             <label class="collarItems checkBoxDesign">
                                                                                 <input type="checkbox" name="fabricMaterial[]" value="collar4">
-                                                                                <figure class="my-0"><img src="images/collarDesigns/collar4.png" alt=""></figure>
+                                                                                <figure class="my-0"><img src="images/collarDesigns/collar04.png" alt=""></figure>
                                                                                 <h6 class="fabricName"> Sewn-in Lace(H) with Triangle</h6>
                                                                             </label>
                                                                             <label class="collarItems checkBoxDesign">
                                                                                 <input type="checkbox" name="fabricMaterial[]" value="collar5">
-                                                                                <figure class="my-0"><img src="images/collarDesigns/collar5.png" alt=""></figure>
+                                                                                <figure class="my-0"><img src="images/collarDesigns/collar05.png" alt=""></figure>
                                                                                 <h6 class="fabricName">Pentagon Neck</h6>
                                                                             </label>
                                                                             <label class="collarItems checkBoxDesign">
                                                                                 <input type="checkbox" name="fabricMaterial[]" value="collar6">
-                                                                                <figure class="my-0"><img src="images/collarDesigns/collar6.png" alt=""></figure>
+                                                                                <figure class="my-0"><img src="images/collarDesigns/collar06.png" alt=""></figure>
                                                                                 <h6 class="fabricName">Sewn-in Lace with Pentagon</h6>
                                                                             </label>
                                                                         </form>
@@ -899,18 +1029,37 @@ if (isset($_GET['subcat'])) {
                                                                     <h6 class="subTabsTitle">
                                                                         Choose Jersey Style
                                                                     </h6>
-                                                                    <div class="JerseyAllStyles ">
-                                                                        <form action="" class="grid3" id="jerseyStyleForm">
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/0.5-1-2-1-0.5.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> Big Hit Pro Series Style 1</h6>
 
-                                                                            </label>
+                                                                    <!-- Default message -->
+                                                                    <div id="chooseCollarForStyleNotice" class="messError">
+                                                                        ⚠️ Please choose a collar first before selecting a style.
+                                                                    </div>
 
+                                                                    <div class="JerseyAllStyles">
+                                                                        <form action="" id="jerseyStyleForm">
+                                                                            <div class="JerseyTriangleVNeck grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="style1">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/0.5-1-2-1-0.5.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> Jersey Triangle V-Neck With Patch</h6>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="JerseyTriangleVNeckWithLace grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="style2">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithLace/Neck0.5-1-2-1-0.5.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> Jersey Triangle V-Neck With Laces</h6>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="JerseyVNeckWithoutPatch grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="style3">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck 5inches.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> Style 3 V-Neck Without Patch</h6>
+                                                                                </label>
+                                                                            </div>
 
                                                                         </form>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -921,37 +1070,81 @@ if (isset($_GET['subcat'])) {
                                                                         Choose Stripes
                                                                     </h6>
                                                                     <div class="JerseyAllStripes">
-                                                                        <form action="" class="grid3" id="jerseyStripesForm">
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe1">
-                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/0.5-1-2-1-0.5.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> <span>0.5-1-2-1-0.5 Inches</span></h6>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe2">
-                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/5-inches.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> <span>5-inches</span></h6>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe3">
-                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/2-3.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> <span>2-3 Inches</span></h6>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe4">
-                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/2-1-2.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> <span>2-1-2 Inches</span></h6>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe5">
-                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/1-3-1.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> <span>1-3-1 Inches</span></h6>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe6">
-                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/1.5-2-1.5.png" alt=""></figure>
-                                                                                <h6 class="fabricName"> <span>1.5-2-1.5 Inches</span></h6>
-                                                                            </label>
+                                                                        <form action="" id="jerseyStripesForm">
+                                                                            <div id="chooseCollarNotice" class="messError">
+                                                                                ⚠️ Please choose a collar first before selecting stripes.
+                                                                            </div>
+                                                                            <div class="forTriangleVNeck grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe1">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/0.5-1-2-1-0.5.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>0.5-1-2-1-0.5 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe2">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>5-inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe3">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/2-3.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>2-3 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe4">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/2-1-2.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>2-1-2 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe5">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/1-3-1.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>1-3-1 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe6">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/1.5-2-1.5.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>1.5-2-1.5 Inches</span></h6>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="forTriangleVNeckWithLace grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe1">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithLace/VNeck1.5-2-1.5.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>1.5-2-1.5 Inches</span></h6>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="forVNeck grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe1">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck0.5-1-2-1-0.5.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span> 0.5-1-2-1-0.5 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe2">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck5inches.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>5-inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe3">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck2-3.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>2-3 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe4">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck2-1-2.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>2-1-2 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe5">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck1-3-1.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>1-3-1 Inches</span></h6>
+                                                                                </label>
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe6">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck1.5-2-1.5.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>1.5-2-1.5 Inches</span></h6>
+                                                                                </label>
+                                                                            </div>
                                                                         </form>
                                                                     </div>
                                                                 </div>

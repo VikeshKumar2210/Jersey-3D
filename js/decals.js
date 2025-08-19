@@ -538,6 +538,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         },
         'triangleVNeckWithoutLaceStripes_0.5-1-2-1-0.5.glb': {
+            Plane087_1: "assets/ModalPatterns/modal7/InsidePatch.svg", // Neck Inside Patch
             Plane003: "assets/ModalPatterns/modal7/ArtBoardNew.svg", //Front Part
             Plane059: "assets/ModalPatterns/modal7/whiteSquare.svg", // Front Middle White
             Plane059_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // Front Middle Yellow1
@@ -632,11 +633,138 @@ document.addEventListener("DOMContentLoaded", function () {
             Plane003_1: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
         },
 
-        // Add same for collar2 models too...
-        'collar2_style1_stripe1.glb': {
-            Plane003: "assets/ModalPatterns/modal9/SomePattern.svg",
-            Plane003_1: "assets/ModalPatterns/modal9/SomePattern.svg",
-        }
+        // V-NECK MODELS 
+        'V-neckStripes_0.5-1-2-1-0.5.glb': {
+            Plane066: "assets/ModalPatterns/modal7/ArtBoardNew.svg", //Front Part
+            Plane059: "assets/ModalPatterns/modal7/whiteSquare.svg", // Front Middle White
+            Plane059_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // Front Middle Yellow1
+            Plane059_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Front Middle Blue
+            Plane059_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // Front Middle Yellow2
+            Plane059_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // Front Middle White
+            Plane066_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Hem
+
+
+            Plane032: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Part
+            Plane057: "assets/ModalPatterns/modal7/whiteSquare.svg", // Back Middle White
+            Plane057_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // Back Middle Yellow1
+            Plane057_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Back Middle Blue
+            Plane057_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // Back Middle Yellow2
+            Plane057_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // Back Middle White
+            Plane032_8: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Hem
+
+
+            Plane032_6: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS upper 
+            Plane060: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White
+            Plane060_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // LS  Middle Yellow1
+            Plane060_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // LS  Middle Blue
+            Plane060_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // LS  Middle Yellow2
+            Plane060_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White
+            Plane086_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS lower
+
+
+            Plane032_5: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS upper 
+            Plane061: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper
+            Plane061_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // RS Yellow Middle1    
+            Plane061_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // RS Blue Middle  
+            Plane061_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // RS Yellow Middle2   
+            Plane061_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper
+            Plane086: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS lower
+
+
+            Plane064_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
+            Plane064_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Middle
+            Plane064: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
+            Plane032_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
+            Plane032_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Shoulder Third White Layer
+
+            V_neck_1_stripe: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
+            Plane087_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Neck Inner
+            Plane087_1: "assets/ModalPatterns/modal7/InsidePatch.svg", // Neck Inside Patch
+
+            Plane032_3: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Upper
+            Plane058: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Left Under arm White Upper
+            Plane058_1: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Left Under arm Yellow Middle1    
+            Plane058_2: "assets/ModalPatterns/modal7/BlueSquare.svg", //  Left Under arm Blue Middle  
+            Plane058_3: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Left Under arm Yellow Middle2   
+            Plane058_4: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Left Under arm White Upper
+            Plane032_7: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Hem
+
+
+            Plane032_4: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Right Under arm Upper
+            Plane056: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Right Under arm White Upper
+            Plane056_1: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Right Under arm Yellow Middle1    
+            Plane056_2: "assets/ModalPatterns/modal7/BlueSquare.svg", //  Right Under arm Blue Middle  
+            Plane056_3: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Right Under arm Yellow Middle2   
+            Plane056_4: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Right Under arm White Upper
+            Plane032_9: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Right Under arm Hem
+
+
+
+
+
+        },
+        // V-NECK MODELS 
+
+        // Tri- V-neck with Lace Neck
+        'triV-neckWithLace_stripes_1.5-2-1.5.glb': {
+            Plane067: "assets/ModalPatterns/modal7/ArtBoardNew.svg", //Front Part
+            Plane040: "assets/ModalPatterns/modal7/whiteSquare.svg", // Front Middle White 
+            Plane040_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Front Middle Blue 
+            Plane040_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Front Middle White
+            Plane067_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Hem
+
+
+            Plane084: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Part
+            Plane024: "assets/ModalPatterns/modal7/whiteSquare.svg", // Back Middle White 
+            Plane024_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Back Middle Blue 
+            Plane024_1: "assets/ModalPatterns/modal7/whiteSquare.svg", // Back Middle White
+            Plane084_8: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Hem
+
+
+            Plane084_6: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS upper 
+            Plane041: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White 
+            Plane041_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // LS  Middle Blue 
+            Plane041_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White
+            Plane086_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS lower
+
+
+            Plane084_5: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS upper 
+            Plane042: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper   
+            Plane042_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // RS Blue Middle    
+            Plane042: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper
+            Plane086: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS lower
+
+
+            Plane083_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
+            Plane083_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Middle
+            Plane083: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
+            Plane084_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
+            Plane084_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Shoulder Third White Layer
+
+            lace_neck_with_triangle_1_stripe_type1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
+            jersey_for_triangle_V_neck_collar: "assets/ModalPatterns/modal7/BlueSquare.svg", // Neck Inner
+            BézierCircle003: "assets/ModalPatterns/modal7/whiteSquare.svg", //White Lace
+            Plane088_1: "assets/ModalPatterns/modal7/InsidePatch.svg", // Neck Inside Patch
+
+            Plane084_3: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Upper
+            Plane030: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Left Under arm White Upper    
+            Plane030_1: "assets/ModalPatterns/modal7/BlueSquare.svg", //  Left Under arm Blue Middle   
+            Plane030_2: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Left Under arm White Upper
+            Plane084_7: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Hem
+
+
+            Plane084_4: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Right Under arm Upper
+            Plane020: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Right Under arm White Upper   
+            Plane020_1: "assets/ModalPatterns/modal7/BlueSquare.svg", //  Right Under arm Blue Middle   
+            Plane020_2: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Right Under arm White Upper
+            Plane084_9: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Right Under arm Hem
+
+
+
+
+
+        },
+        // V-NECK MODELS
     };
     // Go back buttons
     document.querySelectorAll('.goBAckBtn').forEach(button => {
@@ -2121,30 +2249,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 value.startsWith('rgba(') ||
                 /^[a-z]+$/i.test(value)); // Named colors
     }
-    // Mapping collar + style + stripe -> model url + type + colorMappings
-    const dynamicModelMap = {
-        collar1: { // V-Neck
-            style1: {
-                stripe1: {
-                    url: "assets/models/vNeck_style1_stripe1.glb",
-                    type: "halfSleeves",
-                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
-                },
-                stripe2: {
-                    url: "assets/models/vNeck_style1_stripe2.glb",
-                    type: "halfSleeves",
-                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
-                },
-                stripe3: {
-                    url: "assets/models/vNeck_style1_stripe3.glb",
-                    type: "halfSleeves",
-                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
-                }
-                // continue up to stripe6
-            }
-        }
-    };
-
 
     // Load a default model when the page loads
     function loadDefaultModel() {
@@ -2713,12 +2817,47 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         },
         collar2: { // Lace Neck
-            style1: {
+            style2: {
                 stripe1: {
-                    url: "assets/models/collar2_style1_stripe1.glb",
-                    type: "fullSleeves",
+                    url: "assets/models/triV-neckWithLace_stripes_1.5-2-1.5.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+            }
+        },
+        collar3: { // V Neck Without Patch
+            style3: {
+                stripe1: {
+                    url: "assets/models/V-neckStripes_0.5-1-2-1-0.5.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe2: {
+                    url: "assets/models/V-neckStripes_5.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe3: {
+                    url: "assets/models/V-neckStripes_2-3.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe4: {
+                    url: "assets/models/V-neckStripes_2-1-2.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe5: {
+                    url: "assets/models/V-neckStripes_131.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe6: {
+                    url: "assets/models/V-neckStripes_1.5-2-1.5.glb",
+                    type: "halfSleeves",
                     colorMappings: { Plane: "primary", Plane_1: "secondary" }
                 }
+                // continue stripe4, stripe5, stripe6 if needed
             }
         }
     };
@@ -2774,9 +2913,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("ImagePlacementsMeshes").style.display =
             Object.keys(availableMeshes).length > 0 ? 'grid' : 'none';
     }
-
-
-
 
     let selectedCollar = null;
     let selectedStyle = null;
