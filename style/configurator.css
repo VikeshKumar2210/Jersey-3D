@@ -401,7 +401,18 @@ li.nav-item.border-left {
     min-height: 40px;
     color: #111111;
 }
-
+/* .JerseyAllStyles  .checkBoxDesign .fabricName {
+    font-size: 12px;
+    font-weight: 500; 
+    min-height: auto;
+    color: #111111;
+    position: absolute;
+    bottom: 10px;
+    background: #FFF;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, 10px);
+} */
 /* Hide native checkboxes */
 .checkBoxDesign input[type="checkbox"] {
     display: none;
@@ -467,11 +478,16 @@ JERSEY STYLE CONTROLS UI
 JERSEY STRIPES CONTROLS UI
    ========================================================= */
 .JerseyAllStripes .JerseyItems figure {
-    padding: 20px;
+    padding: 10px;
 }
 
 .JerseyAllStripes .checkBoxDesign img {
-    max-width: 40px;
+    max-width: 100%;
+}
+
+.JerseyAllStripes .JerseyItems .fabricName span {
+    display: block;
+    font-weight: 600;
 }
 
 /* =========================================================

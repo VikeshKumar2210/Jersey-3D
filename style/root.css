@@ -1807,8 +1807,17 @@ IMAGE DECAL SCREEN
 
 .activeImgLogos .logosItems {
     box-shadow: 2px 2px 8.01px 0px #00000033;
-    padding: 20px;
+    padding: 15px;
     border-radius: 4px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activeImgLogos .logosItems .activeDecal {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .activeImgLogos .logoPosition {

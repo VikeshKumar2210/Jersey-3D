@@ -507,41 +507,136 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add this near your other model configurations
     const modelSvgPatterns = {
         'Tri_V-neck_1_stripe_5New3.glb': {
-
-
-
             // neck_1_stripe_5New2
-
             Plane087_1: "assets/ModalPatterns/modal7/InsidePatch.svg", // Neck Inside Patch
             Plane087: "assets/ModalPatterns/modal7/JOGStripe2.svg", // Neck Inside Stripe
-            Plane003: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Front Part
+            Plane003: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Part
             Plane026: "assets/ModalPatterns/modal7/BlueSquare.svg", // Front Middle
-            Plane003_1: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Front Hem
-            Plane032: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Back Part
+            Plane003_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Hem
+            Plane032: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Part
             Plane026_3: "assets/ModalPatterns/modal7/BlueSquare.svg", // Back Middle
-            Plane032_10: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Back Hem
-            Plane032_7: "assets/ModalPatterns/modal7/ArtboardNew.svg", // LS upper
+            Plane032_10: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Hem
+            Plane032_7: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS upper
             base_stripe_5___right: "assets/ModalPatterns/modal7/BlueSquare.svg", // LS Middle
-            Plane032_8: "assets/ModalPatterns/modal7/ArtboardNew.svg", // LS lower
-            Plane032_5: "assets/ModalPatterns/modal7/ArtboardNew.svg", // RS upper
+            Plane032_8: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS lower
+            Plane032_5: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS upper
             base_stripe_5___left: "assets/ModalPatterns/modal7/BlueSquare.svg", // LS Middle 
-            Plane032_6: "assets/ModalPatterns/modal7/ArtboardNew.svg", // RS lower
+            Plane032_6: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS lower
             Plane064_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
             Plane032_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
-            Plane032_2: "assets/ModalPatterns/modal7/whitesquare.svg", // Shoulder Third White Layer
+            Plane032_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Shoulder Third White Layer
             Plane064: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
             Plane064_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Back
             Triangle_V__neck_1_stripes_type1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
             jersey_for_triangle_V_neck_collar: "assets/ModalPatterns/modal7/BlueSquare.svg", // Neck Inner
-            Plane032_3: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Left Under arm Upper
+            Plane032_3: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Upper
             Plane026_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Left Under arm Middle
-            Plane032_9: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Left Under arm Middle
-            Plane032_4: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Right Under arm Upper
+            Plane032_9: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Middle
+            Plane032_4: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Right Under arm Upper
             Plane026_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Left Under arm Middle
-            Plane032_11: "assets/ModalPatterns/modal7/ArtboardNew.svg", // Left Under arm Middle
+            Plane032_11: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Middle
 
         },
-        // Add patterns for other models if needed
+        'triangleVNeckWithoutLaceStripes_0.5-1-2-1-0.5.glb': {
+            Plane003: "assets/ModalPatterns/modal7/ArtBoardNew.svg", //Front Part
+            Plane059: "assets/ModalPatterns/modal7/whiteSquare.svg", // Front Middle White
+            Plane059_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // Front Middle Yellow1
+            Plane059_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Front Middle Blue
+            Plane059_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // Front Middle Yellow2
+            Plane059_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // Front Middle White
+            Plane003_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Hem
+
+
+            Plane032: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Part
+            Plane057: "assets/ModalPatterns/modal7/whiteSquare.svg", // Back Middle White
+            Plane057_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // Back Middle Yellow1
+            Plane057_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Back Middle Blue
+            Plane057_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // Back Middle Yellow2
+            Plane057_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // Back Middle White
+            Plane032_8: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Back Hem
+
+
+            Plane032_6: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS upper 
+            Plane060: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White
+            Plane060_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // LS  Middle Yellow1
+            Plane060_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // LS  Middle Blue
+            Plane060_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // LS  Middle Yellow2
+            Plane060_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White
+            Plane086_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS lower
+
+
+            Plane032_5: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS upper 
+            Plane061: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper
+            Plane061_1: "assets/ModalPatterns/modal7/yellowSquare.svg", // RS Yellow Middle1    
+            Plane061_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // RS Blue Middle  
+            Plane061_3: "assets/ModalPatterns/modal7/yellowSquare.svg", // RS Yellow Middle2   
+            Plane061_4: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper
+            Plane086: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS lower
+
+
+            Plane064_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
+            Plane064_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Middle
+            Plane064: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
+            Plane032_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
+            Plane032_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Shoulder Third White Layer
+
+            Triangle_V__neck_1_stripes_type1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
+            jersey_for_triangle_V_neck_collar: "assets/ModalPatterns/modal7/BlueSquare.svg", // Neck Inner
+
+
+            Plane032_3: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Upper
+            Plane058: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Left Under arm White Upper
+            Plane058_1: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Left Under arm Yellow Middle1    
+            Plane058_2: "assets/ModalPatterns/modal7/BlueSquare.svg", //  Left Under arm Blue Middle  
+            Plane058_3: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Left Under arm Yellow Middle2   
+            Plane058_4: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Left Under arm White Upper
+            Plane032_7: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Hem
+
+
+            Plane032_4: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Right Under arm Upper
+            Plane056: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Right Under arm White Upper
+            Plane056_1: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Right Under arm Yellow Middle1    
+            Plane056_2: "assets/ModalPatterns/modal7/BlueSquare.svg", //  Right Under arm Blue Middle  
+            Plane056_3: "assets/ModalPatterns/modal7/yellowSquare.svg", //  Right Under arm Yellow Middle2   
+            Plane056_4: "assets/ModalPatterns/modal7/whiteSquare.svg", //  Right Under arm White Upper
+            Plane032_9: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Right Under arm Hem
+
+
+
+
+
+        },
+
+        'triangleVNeckWithoutLaceStripes_5.glb': {
+            Plane003: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+            Plane003_1: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+        },
+
+        'triangleVNeckWithoutLaceStripes_2-3.glb': {
+            Plane003: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+            Plane003_1: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+        },
+
+        'triangleVNeckWithoutLaceStripes_2-1-2.glb': {
+            Plane003: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+            Plane003_1: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+        },
+
+        'triangleVNeckWithoutLaceStripes_131.glb': {
+            Plane003: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+            Plane003_1: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+        },
+
+        'triangleVNeckWithoutLaceStripes_1.5-2-1.5.glb': {
+            Plane003: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+            Plane003_1: "assets/ModalPatterns/modal8/ArtBoardNew.svg",
+        },
+
+        // Add same for collar2 models too...
+        'collar2_style1_stripe1.glb': {
+            Plane003: "assets/ModalPatterns/modal9/SomePattern.svg",
+            Plane003_1: "assets/ModalPatterns/modal9/SomePattern.svg",
+        }
     };
     // Go back buttons
     document.querySelectorAll('.goBAckBtn').forEach(button => {
@@ -2026,6 +2121,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 value.startsWith('rgba(') ||
                 /^[a-z]+$/i.test(value)); // Named colors
     }
+    // Mapping collar + style + stripe -> model url + type + colorMappings
+    const dynamicModelMap = {
+        collar1: { // V-Neck
+            style1: {
+                stripe1: {
+                    url: "assets/models/vNeck_style1_stripe1.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe2: {
+                    url: "assets/models/vNeck_style1_stripe2.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe3: {
+                    url: "assets/models/vNeck_style1_stripe3.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                }
+                // continue up to stripe6
+            }
+        }
+    };
+
 
     // Load a default model when the page loads
     function loadDefaultModel() {
@@ -2556,6 +2675,54 @@ document.addEventListener("DOMContentLoaded", function () {
         updateUndoRedoButtons();
     }
 
+    // Unified mapping: collar + style + stripe -> model url + type + colorMappings
+    const modelMap = {
+        collar1: { // V-Neck
+            style1: {
+                stripe1: {
+                    url: "assets/models/triangleVNeckWithoutLaceStripes_0.5-1-2-1-0.5.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe2: {
+                    url: "assets/models/triangleVNeckWithoutLaceStripes_5.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe3: {
+                    url: "assets/models/triangleVNeckWithoutLaceStripes_2-3.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe4: {
+                    url: "assets/models/triangleVNeckWithoutLaceStripes_2-1-2.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe5: {
+                    url: "assets/models/triangleVNeckWithoutLaceStripes_131.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                },
+                stripe6: {
+                    url: "assets/models/triangleVNeckWithoutLaceStripes_1.5-2-1.5.glb",
+                    type: "halfSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                }
+                // continue stripe4, stripe5, stripe6 if needed
+            }
+        },
+        collar2: { // Lace Neck
+            style1: {
+                stripe1: {
+                    url: "assets/models/collar2_style1_stripe1.glb",
+                    type: "fullSleeves",
+                    colorMappings: { Plane: "primary", Plane_1: "secondary" }
+                }
+            }
+        }
+    };
+
     function populateImagePlacementButtons() {
         const imageContainer = document.getElementById("dynamicImageMeshButtons");
         imageContainer.innerHTML = ""; // Clear existing buttons
@@ -2606,6 +2773,53 @@ document.addEventListener("DOMContentLoaded", function () {
         // Hide the container if no placement meshes are available
         document.getElementById("ImagePlacementsMeshes").style.display =
             Object.keys(availableMeshes).length > 0 ? 'grid' : 'none';
+    }
+
+
+
+
+    let selectedCollar = null;
+    let selectedStyle = null;
+    let selectedStripe = null;
+
+    // Collar selection
+    document.querySelectorAll("#collarForms input[type=checkbox]").forEach(input => {
+        input.addEventListener("change", () => {
+            selectedCollar = input.value;
+            console.log("Collar selected:", selectedCollar);
+        });
+    });
+
+    // Style selection
+    document.querySelectorAll("#jerseyStyleForm input[type=checkbox]").forEach(input => {
+        input.addEventListener("change", () => {
+            selectedStyle = input.value;
+            console.log("Style selected:", selectedStyle);
+        });
+    });
+
+    // Stripes selection → triggers model load
+    document.querySelectorAll("#jerseyStripesForm input[type=checkbox]").forEach(input => {
+        input.addEventListener("change", () => {
+            selectedStripe = input.value;
+            console.log("Stripe selected:", selectedStripe);
+
+            if (selectedCollar && selectedStyle && selectedStripe) {
+                loadDynamicModel(selectedCollar, selectedStyle, selectedStripe);
+            }
+        });
+    });
+
+
+    function loadDynamicModel(collar, style, stripe) {
+        const config = modelMap[collar]?.[style]?.[stripe];
+        if (!config) {
+            console.warn("No model defined for:", collar, style, stripe);
+            return;
+        }
+
+        console.log(`🔄 Loading dynamic model: ${collar} + ${style} + ${stripe}`);
+        loadModel(config.url, config.colorMappings, config.type);
     }
 
     // UNDO REDO 
@@ -3571,7 +3785,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         textPosition: { x: 0.7, y: 0.2 }, // Text position
                         imagePosition: { x: 0.27, y: 0.21 }  // Image position
                     },
-                    Mesh_5: {
+                    Plane032: {
                         displayName: "Back",
                         uvCorrection: { x: 0, y: 0 },
                         textPosition: { x: 0.5, y: 0.4 },
@@ -3581,13 +3795,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         displayName: "L-Shoulder",
                         uvCorrection: { x: 0, y: -0.2 },
                         textPosition: { x: 0.5, y: 0.6 },
-                        imagePosition: { x: 0.39, y: 0.58 }
+                        imagePosition: { x: 0.38, y: 0.56 }
                     },
                     Plane064: {
                         displayName: "R-Shoulder",
                         uvCorrection: { x: 0, y: -0.2 },
                         textPosition: { x: 0.5, y: 0.6 },
-                        imagePosition: { x: 0.49, y: 0.8 }
+                        imagePosition: { x: 0.61, y: 0.57 }
                     },
                     Plane032_5: {
                         displayName: "Right Sleeve",
@@ -3661,7 +3875,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case 'numberTab':
                 // Show Plane003_2, Plane003_3, and Plane003_1 (from dynamicMeshButtons)
-                const numberButtons = meshButtonsContainer.querySelectorAll('.Mesh_5, .Plane032_7, .Plane032_5');
+                const numberButtons = meshButtonsContainer.querySelectorAll('.Plane032, .Plane032_7, .Plane032_5');
                 numberButtons.forEach(button => {
                     button.style.display = 'block';
                 });
@@ -3669,7 +3883,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             case 'nameTab':
                 // Show only Plane003_1 for name (from dynamicMeshButtons)
-                const nameButton = meshButtonsContainer.querySelector('.Mesh_5');
+                const nameButton = meshButtonsContainer.querySelector('.Plane032');
                 if (nameButton) nameButton.style.display = 'block';
                 break;
 
@@ -3721,35 +3935,36 @@ document.addEventListener("DOMContentLoaded", function () {
         // If no mapping found, return the original name
         return meshName;
     }
-    async function applyImageToSelectedMesh(imageFile, uv, scop = null) {
-        saveState(); // Save state before adding image
+    async function applyImageToSelectedMesh(imageFile, uv, scop = null, rotationDeg = 0) {
+        saveState();
         if (!imageFile || !selectedMesh) return;
 
         try {
             const { texture, bounds, originalImage, imageSrc } = await createImageTexture(imageFile);
-            let finalScop = 1.0;
-            let addedScop = scop || finalScop;
-            // Get the model configuration for the current model
-            const modelConfig = modelMeshConfigs[currentModelType]?.[currentModelFilename];
-            let customPosition = { x: 0.5, y: 0.5 }; // Default center position
+            const addedScop = scop || 1.0;
 
-            if (modelConfig && modelConfig.placementMeshes && modelConfig.placementMeshes[selectedMesh.name]) {
+            const modelConfig = modelMeshConfigs[currentModelType]?.[currentModelFilename];
+            let customPosition = { x: 0.5, y: 0.5 };
+            if (modelConfig?.placementMeshes?.[selectedMesh.name]?.imagePosition) {
                 customPosition = modelConfig.placementMeshes[selectedMesh.name].imagePosition || customPosition;
             }
 
-            // Use either the custom position or the clicked position
             const usePosition = uv || customPosition;
             const offsetX = usePosition.x - 0.5;
             const offsetY = usePosition.y - 0.5;
+
+            // ✅ convert degrees → radians once here
+            const rotationRad = THREE.MathUtils.degToRad(rotationDeg);
 
             const newDecal = {
                 image: originalImage,
                 imageSrc,
                 offset: new THREE.Vector2(offsetX, offsetY),
-                rotation: 0,
+                rotation: rotationRad,        // Three.js/internal use (radians)
+                rotationDeg: rotationDeg,     // for UI/state (degrees)
                 scale: addedScop,
                 mesh: selectedMesh,
-                meshName: selectedMesh.name, // ✅ Add this line
+                meshName: selectedMesh.name,
                 uuid: THREE.MathUtils.generateUUID(),
                 bounds: bounds,
                 isLocked: false,
@@ -3757,28 +3972,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
             window.imageDecals.push(newDecal);
             updateMeshTextureWithAllDecals();
-            updateDecalsListUI(); // ✅ Add this
-            // Set as active decal
+            updateDecalsListUI();
             activeImageDecalIndex = imageDecals.length - 1;
             activeTextDecalIndex = -1;
             updateImagePreview();
             saveDesignToLocalStorage();
-            // Reset sliders
+
+            // ✅ reflect the starting rotation (in degrees) in your UI
+            rotateImgSlider.value = rotationDeg;
+            rotateImgValueSpan.textContent = `${rotationDeg}°`;
+
+            // reset size UI only
             resizeImgSlider.value = 50;
             resizeValueSpan.textContent = "50%";
-            rotateImgSlider.value = 0;
-            rotateImgValueSpan.textContent = "0°";
 
-            // Reset placement mode
             resetImagePlacementMode();
 
-            // Hide third screen, show fourth screen
             document.querySelector('.logoThirdScreen').style.display = 'none';
             document.querySelector('.logoSecondScreen .uploadLogoForm').style.display = 'none';
             document.querySelector('.logoFourthScreen').style.display = 'block';
             document.querySelector('.logoSecondScreen').style.display = 'block';
 
-            console.log(`Added image to ${selectedMesh.name} at position x:${usePosition.x.toFixed(2)}, y:${usePosition.y.toFixed(2)}`);
+            console.log(`Added image to ${selectedMesh.name} at ${rotationDeg}°, x:${usePosition.x.toFixed(2)}, y:${usePosition.y.toFixed(2)}`);
         } catch (error) {
             console.error("Error applying image:", error);
         }
@@ -4104,10 +4319,10 @@ document.addEventListener("DOMContentLoaded", function () {
         "Mesh_3": "images/decalPlacements/RightSleeveNumber.png",
         "Plane032_7": "images/decalPlacements/LeftSleeveNumber.png",
         "Plane032_5": "images/decalPlacements/RightSleeveNumber.png",
-        "Mesh_5": "images/decalPlacements/BackNumber.png",
+        "Plane032": "images/decalPlacements/BackNumber.png",
 
         // For name placement
-        "Mesh_5": "images/decalPlacements/BackName.png",
+        "Plane032": "images/decalPlacements/BackName.png",
 
         // For logo placement
         "Plane064_1": "images/decalPlacements/LeftShoulderLogo.png",
@@ -4200,7 +4415,7 @@ ${displayName}
     }
 
     function populateGradientForm(meshNames) {
-        const allowedGradientMeshes = ['Mesh', 'Mesh_5', 'Plane032_7', 'Mesh_11', 'Plane032_5', 'Mesh_16', 'Mesh_1', 'Mesh_6'];
+        const allowedGradientMeshes = ['Mesh', 'Plane032', 'Plane032_7', 'Mesh_11', 'Plane032_5', 'Mesh_16', 'Mesh_1', 'Mesh_6'];
         const gradientContainer = document.querySelector(".gradeientMEsh .gradientFaces");
         gradientContainer.innerHTML = ""; // Clear existing content
 
@@ -5333,78 +5548,60 @@ ${displayName}
     }
 
     function updateDecalsListUI() {
-        const listContainer = document.getElementById("appliedDecalsList");
+        const listContainer = document.getElementById("appliedDecalsListImg");
         listContainer.innerHTML = '';
 
-        // Loop through ALL text decals
-        window.textDecals?.forEach((decal, index) => {
-            if (!decal || !decal.uuid) return;
-            let getmnme = getMashName(`${decal.meshName}`);
+        // Create the wrapper
+        const wrapper = document.createElement("div");
+        wrapper.className = "activeImgLogos grid2";
+
+        // Helper: build logosItems block
+        function createLogosItem(positionName, uuid, type, isText, textContent, imageSrc) {
             const item = document.createElement("div");
-            item.className = "decal-list-item";
+            item.className = "logosItems";
+
             item.innerHTML = `
-                <span>${decal.text} (${getmnme})</span>
-                <button class="delete-decal-btn" data-type="text" data-uuid="${decal.uuid}">
-                    <img src="images/icons/deletIcon.png" alt="delete" />
-                </button>
-            `;
-            listContainer.appendChild(item);
+            <div class="upper flexRow justify-content-between">
+                <p class="logoPosition my-auto">${positionName}</p>
+                <figure class="bottomLeftButton my-auto">
+                    <img src="images/icons/deletIcon.png" 
+                         alt="deleteDecalIcon" 
+                         class="textMeshesItemsIcon TextRemoveValue delete-decal-btn" 
+                         data-type="${type}" data-uuid="${uuid}" 
+                         style="width: 15px;">
+                </figure>
+            </div>
+            <figure class="m-auto mainLogo">
+                ${isText
+                    ? `<p Class="activeDecal">${textContent}</p>`
+                    : `<img src="${imageSrc || 'images/icons/defLogo.png'}" alt="decalPreview">`
+                }
+            </figure>
+        `;
+            return item;
+        }
+
+        // Loop through text decals
+        window.textDecals?.forEach((decal) => {
+            if (!decal || !decal.uuid) return;
+            let meshLabel = getMashName(`${decal.meshName}`);
+            const item = createLogosItem(meshLabel, decal.uuid, "text", true, decal.text, null);
+            wrapper.appendChild(item);
         });
 
-        // Loop through ALL image decals
-        window.imageDecals?.forEach((decal, index) => {
+        // Loop through image decals
+        window.imageDecals?.forEach((decal) => {
             if (!decal || !decal.uuid) return;
-
-            const meshName = decal.mesh?.name || 'Unknown Mesh';
-            let meshName12 = getMashName(meshName);
-            const item = document.createElement("div");
-            item.className = "decal-list-item";
-            item.innerHTML = `
-                <span>Image ${index + 1} (${meshName12})</span>
-                <button class="delete-decal-btn" data-type="image" data-uuid="${decal.uuid}">
-                    <img src="images/icons/deletIcon.png" alt="delete" />
-                </button>
-            `;
-            listContainer.appendChild(item);
+            let meshLabel = getMashName(decal.mesh?.name || "Unknown Mesh");
+            const item = createLogosItem(meshLabel, decal.uuid, "image", false, null, decal.imageSrc);
+            wrapper.appendChild(item);
         });
 
-        const listContainerImg = document.getElementById("appliedDecalsListImg");
-        listContainerImg.innerHTML = '';
-
-        // Loop through ALL text decals
-        window.textDecals?.forEach((decal, index) => {
-            if (!decal || !decal.uuid) return;
-            let getmnme = getMashName(`${decal.meshName}`);
-            const item = document.createElement("div");
-            item.className = "decal-list-item";
-            item.innerHTML = `
-                <span>${decal.text} (${getmnme})</span>
-                <button class="delete-decal-btn" data-type="text" data-uuid="${decal.uuid}">
-                    <img src="images/icons/deletIcon.png" alt="delete" />
-                </button>
-            `;
-            listContainerImg.appendChild(item);
-        });
-
-        // Loop through ALL image decals
-        window.imageDecals?.forEach((decal, index) => {
-            if (!decal || !decal.uuid) return;
-
-            const meshName = decal.mesh?.name || 'Unknown Mesh';
-            let meshName12 = getMashName(meshName);
-            const item = document.createElement("div");
-            item.className = "decal-list-item";
-            item.innerHTML = `
-                <span>Image ${index + 1} (${meshName12})</span>
-                <button class="delete-decal-btn" data-type="image" data-uuid="${decal.uuid}">
-                    <img src="images/icons/deletIcon.png" alt="delete" />
-                </button>
-            `;
-            listContainerImg.appendChild(item);
-        });
+        // Append the wrapper into container
+        listContainer.appendChild(wrapper);
 
         // Add delete event listeners
-        document.querySelectorAll(".delete-decal-btn").forEach(btn => {
+        listContainer.querySelectorAll(".delete-decal-btn").forEach(btn => {
             btn.addEventListener("click", () => {
                 const type = btn.getAttribute("data-type");
                 const uuid = btn.getAttribute("data-uuid");
@@ -5412,6 +5609,7 @@ ${displayName}
             });
         });
     }
+
 
     function deleteDecalByUUID(type, uuid) {
         let meshToUpdate = null;
@@ -5461,7 +5659,7 @@ ${displayName}
     function getMashName(meshName) {
 
         switch (meshName) {
-            case "Mesh_5":
+            case "Plane032":
                 return "Back";
                 break;
             case "Plane003":
@@ -5754,19 +5952,19 @@ ${displayName}
             let fontSize = currentFontSize;
             let fontFamily = document.getElementById("fontFamilySelect3").value;
             console.log(`Applying text to mesh: ${selectedMesh.name} with font size: ${currentTextMode}`);
-            if (currentTextMode === "name" && selectedMesh.name == "Mesh_5") {
-                meshName = "Mesh_5";
-                customPosition = { x: 0.5, y: 0.25 };
-                fontSize = 180;
+            if (currentTextMode === "name" && selectedMesh.name == "Plane032") {
+                meshName = "Plane032";
+                customPosition = { x: 0.25, y: 0.15 };
+                fontSize = 50;
                 colornewcust = '#fffff';
                 fontFamily = "Impact";
                 currentFontSize = fontSize;
                 document.getElementById("fontFamilySelect3").value = fontFamily;
                 setViewfront('backAngle');
-            } else if (currentTextMode === "number" && selectedMesh.name == "Mesh_5") {
-                meshName = "Mesh_5";
-                customPosition = { x: 0.5, y: 0.5 };
-                fontSize = 480;
+            } else if (currentTextMode === "number" && selectedMesh.name == "Plane032") {
+                meshName = "Plane032";
+                customPosition = { x: 0.25, y: 0.25 };
+                fontSize = 150;
                 colornewcust = '#fffff';
                 fontFamily = "Impact";
                 currentFontSize = fontSize;
@@ -5811,25 +6009,32 @@ ${displayName}
             //resetTextPlacementMode();
         }
         else if (decalType === 'image' && isReadyToPlaceImage && pendingImageFile) {
-            let customPosition = { x: 0.5, y: 0.5 }; // Default for image
+            let customPosition = { x: 0.5, y: 0.5 };
+            let scop = 1.0;
+            let rotationDeg = 0; // ✅ degrees now
+
             if (modelConfig?.placementMeshes?.[meshName]?.imagePosition) {
                 customPosition = modelConfig.placementMeshes[meshName].imagePosition;
             }
-            let scop = 1.0;
+
+            // ✅ per-mesh overrides in DEGREES
             if (selectedMesh.name == "Plane003") {
                 scop = 1.2;
+                rotationDeg = 0;          // was Math.PI / 4
                 setViewfront('frontAngle');
             } else if (selectedMesh.name == "Plane064") {
-                scop = 0.8;
+                scop = 0.6;
+                rotationDeg = 141;          // was Math.PI / 2
                 setViewfront('rightAngle');
             } else if (selectedMesh.name == "Plane064_1") {
-                scop = 1;
+                scop = 0.6;
+                rotationDeg = 227;         // was -Math.PI / 2
                 setViewfront('leftAngle');
             }
 
-            applyImageToSelectedMesh(pendingImageFile, customPosition, scop);
-            //resetImagePlacementMode();
+            applyImageToSelectedMesh(pendingImageFile, customPosition, scop, rotationDeg);
         }
+
     }
     function calculateVisualCenterUV(mesh) {
         if (!mesh.geometry.attributes.uv) return new THREE.Vector2(0.5, 0.5);

@@ -903,40 +903,11 @@ if (isset($_GET['subcat'])) {
                                                                         <form action="" class="grid3" id="jerseyStyleForm">
                                                                             <label class="JerseyItems checkBoxDesign">
                                                                                 <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
+                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/0.5-1-2-1-0.5.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> Big Hit Pro Series Style 1</h6>
+
                                                                             </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/jerseyStyle/style1.png" alt=""></figure>
-                                                                            </label>
+
 
                                                                         </form>
 
@@ -952,43 +923,36 @@ if (isset($_GET['subcat'])) {
                                                                     <div class="JerseyAllStripes">
                                                                         <form action="" class="grid3" id="jerseyStripesForm">
                                                                             <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
+                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe1">
+                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/0.5-1-2-1-0.5.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> <span>0.5-1-2-1-0.5 Inches</span></h6>
                                                                             </label>
                                                                             <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
+                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe2">
+                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/5-inches.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> <span>5-inches</span></h6>
                                                                             </label>
                                                                             <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
+                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe3">
+                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/2-3.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> <span>2-3 Inches</span></h6>
                                                                             </label>
                                                                             <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
+                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe4">
+                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/2-1-2.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> <span>2-1-2 Inches</span></h6>
                                                                             </label>
                                                                             <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
+                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe5">
+                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/1-3-1.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> <span>1-3-1 Inches</span></h6>
                                                                             </label>
                                                                             <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
-                                                                            </label>
-                                                                            <label class="JerseyItems checkBoxDesign">
-                                                                                <input type="checkbox" name="fabricMaterial[]" value="style1">
-                                                                                <figure class="my-0"><img src="images/stripes/stripes1.png" alt=""></figure>
+                                                                                <input type="checkbox" name="fabricMaterial[]" value="stripe6">
+                                                                                <figure class="my-0"><img src="assets/accordingCollor/stripesType/1.5-2-1.5.png" alt=""></figure>
+                                                                                <h6 class="fabricName"> <span>1.5-2-1.5 Inches</span></h6>
                                                                             </label>
                                                                         </form>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1584,7 +1548,7 @@ if (isset($_GET['subcat'])) {
                                                                             other
                                                                             common image formats for your convenience.
                                                                         </div>
-                                                                        <div class="activeImgLogos grid2">
+                                                                        <!-- <div class="activeImgLogos grid2">
 
                                                                             <div class="logosItems">
                                                                                 <div class="upper flexRow justify-content-between">
@@ -1604,7 +1568,7 @@ if (isset($_GET['subcat'])) {
                                                                                 </div>
                                                                                 <figure class="m-auto mainLogo"><img src="images/icons/defLogo.png" alt=""></figure>
                                                                             </div>
-                                                                        </div>
+                                                                        </div> -->
                                                                     </div>
 
 
@@ -2238,7 +2202,7 @@ if (isset($_GET['subcat'])) {
                                                                 </div>
                                                             </div>
                                                             <div class="textControls controlItems">
-                                                                
+
                                                                 <div class="rotate  defTextDecalItems defItems w-100">
                                                                     <label for="rotateSlider" class="f14">Rotate Text </label>
                                                                     <div class="textControl">
