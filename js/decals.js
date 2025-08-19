@@ -1646,7 +1646,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Zone to mesh mapping
+    // // Zone to mesh mapping
     const zoneMeshMap = {
         zone1: ["Plane003", "Plane032"],
         zone2: ["Plane003_1", "Plane032_10"],
@@ -1659,6 +1659,72 @@ document.addEventListener("DOMContentLoaded", function () {
         zone9: ["Plane032_4", "Plane032_3", "Plane032_11", "Plane032_9"],
 
     };
+    const modalZoneConfig = {
+        "Tri_V-neck_1_stripe_5New3.glb": {
+            zoneMeshMap: {
+                zone1: ["Plane003", "Plane032"],
+                zone2: ["Plane003_1", "Plane032_10"],
+                zone3: ["base_stripe_5___left", "Plane026", "base_stripe_5___right", "Plane026_3", "Plane026_1", "Plane026_2"],
+                zone4: ["Plane032_5", "Plane032_7"],
+                zone5: ["Plane032_6", "Plane032_8"],
+                zone6: ["Plane064", "Plane064_1", "Plane064_2"],
+                zone7: ["Triangle_V__neck_1_stripes_type1"],
+                zone8: ["jersey_for_triangle_V_neck_collar"],
+                zone9: ["Plane032_4", "Plane032_3", "Plane032_11", "Plane032_9"],
+            },
+            zoneColorGroupMap: {
+                zone1: { "Plane003": "primary", "Plane032": "primary" },
+                zone2: { "Plane003_1": "primary", "Plane032_10": "primary" },
+                zone3: { "base_stripe_5___left": "secondary", "Plane026": "secondary", "base_stripe_5___right": "secondary", "Plane026_3": "secondary", "Plane026_1": "secondary", "Plane026_2": "secondary" },
+                zone4: { "Plane032_5": "primary", "Plane032_7": "primary" },
+                zone5: { "Plane032_6": "primary", "Plane032_8": "primary" },
+                zone6: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary" },
+                zone7: { "Triangle_V__neck_1_stripes_type1": "secondary" },
+                zone8: { "jersey_for_triangle_V_neck_collar": "secondary" },
+                zone9: { "Plane032_4": "primary", "Plane032_3": "primary", "Plane032_11": "primary", "Plane032_9": "primary" }
+            },
+            subZoneColorGroupMap: {
+                stripes1: { "base_stripe_5___left": "secondary", "Plane026": "secondary", "base_stripe_5___right": "secondary", "Plane026_3": "secondary" },
+                stripes2: { "Plane026_1": "secondary" },
+                stripes3: { "Plane026_2": "secondary" },
+                collar1: { "Triangle_V__neck_1_stripes_type1": "secondary" },
+            }
+        },
+        // Add mappings for other modal GLB files here (use their mesh/zone structure)
+        // For example:
+        "triV-neckWithLace_stripes_1.5-2-1.5.glb": {
+            zoneMeshMap: {
+                zone1: ["Plane067", "Plane084"],
+                zone2: ["Plane067_1", "Plane084_8"],
+                zone3: ["Plane040_1", "Plane024_2", "Plane041_1" ],
+                zone4: ["Plane084_5", "Plane084_6"],
+                zone5: ["Plane086_1", "Plane086"],
+                zone6: ["Plane083_1", "Plane083", "Plane083_2"],
+                zone7: ["lace_neck_with_triangle_1_stripe_type1"],
+                zone8: ["jersey_for_triangle_V_neck_collar"],
+                zone9: ["Plane084_3", "Plane084_7", "Plane084_4"],
+            },
+            zoneColorGroupMap: {
+                zone1: { "Plane067": "primary", "Plane084": "primary" },
+                zone2: { "Plane067_1": "primary", "Plane084_8": "primary" },
+                zone3: { "Plane040_1": "secondary", "Plane024_2": "secondary",  "Plane041_1": "secondary",  },
+                zone4: { "Plane084_5": "primary", "Plane084_6": "primary" },
+                zone5: { "Plane086_1": "primary", "Plane086": "primary" },
+                zone6: { "Plane083_1": "secondary", "Plane083": "secondary", "Plane083_2": "secondary" },
+                zone7: { "lace_neck_with_triangle_1_stripe_type1": "secondary" },
+                zone8: { "jersey_for_triangle_V_neck_collar": "secondary" },
+                zone9: { "Plane084_3": "primary", "Plane084_7": "Primary", "Plane084_4": "Primary" }
+            },
+            subZoneColorGroupMap: {
+                stripes1: { "Plane042": "tertiary", "Plane026": "secondary", "Plane040_2": "tertiary", "Plane026_3": "secondary" },
+                stripes2: { "Plane024_2": "secondary", "Plane041_1": "secondary" , "Plane024_2": "secondary" , "Plane024_2": "secondary"  },
+                stripes3: { "Plane026_2": "secondary" },
+                collar1: { "lace_neck_with_triangle_1_stripe_type1": "secondary" },
+            }
+        }
+        // ...
+    };
+
 
     // Zone + Mesh to Color Group (Primary/Secondary/Tertiary)
     const zoneColorGroupMap = {
@@ -1756,7 +1822,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     function blinkSubzoneMeshes(subzone) {
-        const meshColorMap = subZoneColorGroupMap[subzone] || {};
+        const meshColorMap = activeZoneConfig.subZoneColorGroupMap[subzone] || {};
         const meshesToBlink = Object.keys(meshColorMap);
         const blinkDuration = 5000; // 5 seconds
         const blinkSpeed = 500; // Update every 50ms for smooth transition
@@ -1826,8 +1892,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function blinkZoneMeshes(zone) {
-        const meshesToBlink = zoneMeshMap[zone] || [];
-        const blinkDuration = 5000; // 5 seconds
+        const meshesToBlink = activeZoneConfig.zoneMeshMap[zone] || [];
+        const blinkDuration = 3000; // 5 seconds
         const blinkSpeed = 500; // Update every 50ms for smooth transition
         const startTime = Date.now();
 
@@ -1904,7 +1970,6 @@ document.addEventListener("DOMContentLoaded", function () {
         radio.addEventListener("change", () => {
             const selected = radio.value;
             activeZone = selected;
-
             const parentZone = subzoneToZoneMap[selected];
             if (parentZone) {
                 updateZoneTitle(parentZone, selected);
@@ -1943,8 +2008,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (!subzoneToZoneMap[selected]) {
                 blinkZoneMeshes(selected);
-                updateSvgPatternColors();
-                applyZoneColor(selected);
+                updateSvgPatternColors(); // Changed from applyZoneColor(selected)
             }
         });
     });
@@ -1977,7 +2041,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function applySubzoneColor(subzone) {
-        const meshColorMap = subZoneColorGroupMap[subzone] || {};
+        const meshColorMap = activeZoneConfig.subZoneColorGroupMap[subzone] || {};
         const meshNames = Object.keys(meshColorMap);
 
         model.traverse(child => {
@@ -2084,9 +2148,8 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(`Primary: ${getColorHex(COLORS.primary)}`);
         console.log(`Secondary: ${getColorHex(COLORS.secondary)}`);
         console.log(`Tertiary: ${getColorHex(COLORS.tertiary)}`);
-
-        const zoneMeshes = zoneMeshMap[activeZone] || [];
-        const meshColorMap = zoneColorGroupMap[activeZone] || {};
+        const zoneMeshes = activeZoneConfig.zoneMeshMap[activeZone] || [];
+        const meshColorMap = activeZoneConfig.zoneColorGroupMap[activeZone] || {};
 
         if (!zoneSvgColorMap[activeZone]) zoneSvgColorMap[activeZone] = {};
 
@@ -2269,6 +2332,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         loadModel(defaultModelUrl, defaultColorMappings, defaultModelType);
     }
+    let activeZoneConfig = null;
+
     function loadModel(url, colorMappings, modelType) {
         console.log(`Loading model: ${url}, type: ${modelType}`);
 
@@ -2286,6 +2351,8 @@ document.addEventListener("DOMContentLoaded", function () {
         currentModelType = modelType;
         currentModelFilename = url.split('/').pop(); // Clear previous model and decals
         // Hide all forms initially
+        activeZoneConfig = modalZoneConfig[currentModelFilename];
+        if (!activeZoneConfig) activeZoneConfig = modalZoneConfig["Tri_V-neck_1_stripe_5New3.glb"];
         // Remove active class from all design items
         document.querySelectorAll(".designsItems").forEach(item => {
             item.classList.remove("active");
@@ -2946,7 +3013,89 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    function applyZoneColor(zone) {
+        const meshColorMap = activeZoneConfig.zoneColorGroupMap[zone] || {};
+        const meshNames = Object.keys(meshColorMap);
 
+        model.traverse(child => {
+            if (!child.isMesh || !child.userData.pattern || !child.userData.pattern.isSvg) return;
+
+            const meshName = child.name;
+            if (!meshNames.includes(meshName)) return;
+
+            const patternData = child.userData.pattern;
+            const originalColors = patternData.originalColors;
+
+            let customizedSvg = patternData.originalSvg || patternData.svgContent;
+            patternData.originalSvg = patternData.originalSvg || patternData.svgContent;
+
+            const newColorMap = {};
+            originalColors.forEach(originalColor => {
+                const normalized = originalColor.toLowerCase().replace('#', '');
+                const COLOR_MAPPING = {
+                    "#fdb515": "primary",
+                    "#00003b": "secondary",
+                    "#ffffff": "tertiary",
+                    "white": "tertiary"
+                };
+
+                let group = null;
+                for (const [key, val] of Object.entries(COLOR_MAPPING)) {
+                    if (normalized === key.replace('#', '').toLowerCase()) {
+                        group = val;
+                        break;
+                    }
+                }
+
+                const expectedGroup = meshColorMap[meshName];
+                if (group && group === expectedGroup) {
+                    updateRadioPreview(zone, group);
+
+                    let replacementColor = MESH_COLORS[meshName] || COLORS[group];
+                    if (typeof replacementColor === 'number') {
+                        replacementColor = `#${replacementColor.toString(16).padStart(6, '0')}`;
+                    }
+                    if (!replacementColor.startsWith('#')) {
+                        replacementColor = `#${replacementColor}`;
+                    }
+
+                    newColorMap[group] = replacementColor.toLowerCase();
+
+                    const colorRegex = new RegExp(`(${originalColor}|${originalColor.toLowerCase()}|${originalColor.toUpperCase()})`, 'g');
+                    customizedSvg = customizedSvg.replace(colorRegex, replacementColor);
+                }
+            });
+
+            child.userData.pattern.currentColorMap = newColorMap;
+
+            const parser = new DOMParser();
+            const svgDoc = parser.parseFromString(customizedSvg, "image/svg+xml");
+            const svgElement = svgDoc.querySelector('svg');
+
+            let svgWidth = parseFloat(svgElement.getAttribute('width') || svgElement.viewBox.baseVal.width || 1024);
+            let svgHeight = parseFloat(svgElement.getAttribute('height') || svgElement.viewBox.baseVal.height || 1024);
+
+            const svgBlob = new Blob([customizedSvg], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(svgBlob);
+
+            const img = new Image();
+            img.onload = function () {
+                const canvas = document.createElement("canvas");
+                canvas.width = svgWidth;
+                canvas.height = svgHeight;
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                const baseTexture = new THREE.CanvasTexture(canvas);
+                baseTexture.flipY = false;
+                child.userData.pattern.baseTexture = baseTexture;
+
+                updateMeshTextureForMesh(child);
+                URL.revokeObjectURL(url);
+            };
+            img.src = url;
+        });
+    }
     function loadDynamicModel(collar, style, stripe) {
         const config = modelMap[collar]?.[style]?.[stripe];
         if (!config) {
