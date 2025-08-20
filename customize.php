@@ -699,9 +699,9 @@ if (isset($_GET['subcat'])) {
                 collar1: "forTriangleVNeck",
                 collar2: "forTriangleVNeckWithLace",
                 collar3: "forVNeck",
-                collar4: "forTriangleVNeckWithLace",
-                collar5: "forVNeck",
-                collar6: "forTriangleVNeckWithLace"
+                collar4: "ForTriSewInLace",
+                collar5: "forPentagonNeck",
+                collar6: "forSewInLaceWithPentagonNeck"
             };
 
             // Hide all stripe groups
@@ -758,9 +758,9 @@ if (isset($_GET['subcat'])) {
                 collar1: "JerseyTriangleVNeck",
                 collar2: "JerseyTriangleVNeckWithLace",
                 collar3: "JerseyVNeckWithoutPatch",
-                collar4: "JerseyTriangleVNeck",
+                collar4: "forSewInLaceHTri",
                 collar5: "JerseyPentagon",
-                collar6: "JerseyPentagon"
+                collar6: "SewInLaceWithPentagonNeck"
             };
 
             // Hide all style groups
@@ -1058,6 +1058,27 @@ if (isset($_GET['subcat'])) {
                                                                                     <h6 class="fabricName"> Style 3 V-Neck Without Patch</h6>
                                                                                 </label>
                                                                             </div>
+                                                                            <div class="forSewInLaceHTri grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="style4">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/Sewn-in_Lace(H)_with_Triangle/SewnLace(H)withTriangle 2-3.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> Sew in Lace (H)</h6>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="JerseyPentagon grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="style5">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/Pentagon_Neck/PentagonNeck5inches.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> Jersey Pentagon Neck</h6>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="SewInLaceWithPentagonNeck grid3">
+                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="style6">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/Sewn-in_Lace_with_Pentagon/Sewn-inLaceWithPentagon2-3.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> Sew in Lace with Pentagon Neck</h6>
+                                                                                </label>
+                                                                            </div>
 
                                                                         </form>
                                                                     </div>
@@ -1085,26 +1106,6 @@ if (isset($_GET['subcat'])) {
                                                                                     <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
                                                                                     <h6 class="fabricName"> <span>5-inches</span></h6>
                                                                                 </label>
-                                                                                <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe3">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/2-3.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>2-3 Inches</span></h6>
-                                                                                </label>
-                                                                                <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe4">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/2-1-2.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>2-1-2 Inches</span></h6>
-                                                                                </label>
-                                                                                <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe5">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/1-3-1.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>1-3-1 Inches</span></h6>
-                                                                                </label>
-                                                                                <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe6">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/1.5-2-1.5.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>1.5-2-1.5 Inches</span></h6>
-                                                                                </label>
                                                                             </div>
                                                                             <div class="forTriangleVNeckWithLace grid3">
                                                                                 <label class="JerseyItems checkBoxDesign">
@@ -1119,30 +1120,26 @@ if (isset($_GET['subcat'])) {
                                                                                     <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck0.5-1-2-1-0.5.png" alt=""></figure>
                                                                                     <h6 class="fabricName"> <span> 0.5-1-2-1-0.5 Inches</span></h6>
                                                                                 </label>
+                                                                            </div>
+                                                                            <div class="ForTriSewInLace grid3">
                                                                                 <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe2">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck5inches.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>5-inches</span></h6>
-                                                                                </label>
-                                                                                <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe3">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck2-3.png" alt=""></figure>
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe1">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/Sewn-in_Lace(H)_with_Triangle/SewnLace(H)withTriangle 2-3.png" alt=""></figure>
                                                                                     <h6 class="fabricName"> <span>2-3 Inches</span></h6>
                                                                                 </label>
+                                                                            </div>
+                                                                            <div class="forPentagonNeck grid3">
                                                                                 <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe4">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck2-1-2.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>2-1-2 Inches</span></h6>
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe1">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/Pentagon_Neck/PentagonNeck5inches.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span> 5 Inches</span></h6>
                                                                                 </label>
+                                                                            </div>
+                                                                            <div class="forSewInLaceWithPentagonNeck grid3">
                                                                                 <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe5">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck1-3-1.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>1-3-1 Inches</span></h6>
-                                                                                </label>
-                                                                                <label class="JerseyItems checkBoxDesign">
-                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe6">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck1.5-2-1.5.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span>1.5-2-1.5 Inches</span></h6>
+                                                                                    <input type="checkbox" name="fabricMaterial[]" value="stripe1">
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/Sewn-in_Lace_with_Pentagon/Sewn-inLaceWithPentagon2-3.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span>2-3 Inches</span></h6>
                                                                                 </label>
                                                                             </div>
                                                                         </form>
@@ -1344,8 +1341,13 @@ if (isset($_GET['subcat'])) {
                                                                 </label>
                                                                 <label class="colorsMeshItems">
                                                                     <input type="radio" name="zoneRadio" value="zone9">
-                                                                    <div class="meshActiveColor" id="colorPreview-zone9"></div>
+                                                                    <div class="meshActiveColor" id="colorPreview-"></div>
                                                                     <h6 class="meshActiveFaceName">Zone 9</h6>
+                                                                </label>
+                                                                <label class="colorsMeshItems">
+                                                                    <input type="radio" name="zoneRadio" value="zone10">
+                                                                    <div class="meshActiveColor" id="colorPreview-zone10"></div>
+                                                                    <h6 class="meshActiveFaceName">Zone 10</h6>
                                                                 </label>
                                                                 <div class="subCategory zone3 subZonesDiv ">
                                                                     <label class="colorsMeshItems">

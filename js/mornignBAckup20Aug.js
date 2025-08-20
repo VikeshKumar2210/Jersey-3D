@@ -722,7 +722,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             Plane084_6: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS upper 
-            Plane041: "assets/ModalPatterns/modal6/RightSleeveStripe2.svg", // LS  Middle White 
+            Plane041: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White 
             Plane041_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // LS  Middle Blue 
             Plane041_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // LS  Middle White
             Plane086_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // LS lower
@@ -731,7 +731,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Plane084_5: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS upper 
             Plane042: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper   
             Plane042_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // RS Blue Middle    
-            Plane042: "assets/ModalPatterns/modal6/RightSleeveStripe2.svg", // RS White Upper
+            Plane042: "assets/ModalPatterns/modal7/whiteSquare.svg", // RS White Upper
             Plane086: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS lower
 
 
@@ -743,7 +743,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             lace_neck_with_triangle_1_stripe_type1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
             jersey_for_triangle_V_neck_collar: "assets/ModalPatterns/modal7/BlueSquare.svg", // Neck Inner
-            BézierCircle003: "assets/ModalPatterns/modal6/Lace.svg", //White Lace
+            BézierCircle003: "assets/ModalPatterns/modal7/whiteSquare.svg", //White Lace
             Plane088_1: "assets/ModalPatterns/modal7/InsidePatch.svg", // Neck Inside Patch
 
             Plane084_3: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Left Under arm Upper
@@ -1696,31 +1696,29 @@ document.addEventListener("DOMContentLoaded", function () {
             zoneMeshMap: {
                 zone1: ["Plane067", "Plane084"],
                 zone2: ["Plane067_1", "Plane084_8"],
-                zone3: ["Plane042_1", "Plane040_1", "Plane041_1", "Plane084", "Plane042", "Plane040", "Plane041", "Plane024", "Plane042", "Plane040_2", "Plane041_2", "Plane024_1"],
+                zone3: ["Plane040_1", "Plane024_2", "Plane041_1" ],
                 zone4: ["Plane084_5", "Plane084_6"],
                 zone5: ["Plane086_1", "Plane086"],
                 zone6: ["Plane083_1", "Plane083", "Plane083_2"],
                 zone7: ["lace_neck_with_triangle_1_stripe_type1"],
                 zone8: ["jersey_for_triangle_V_neck_collar"],
                 zone9: ["Plane084_3", "Plane084_7", "Plane084_4"],
-                zone10: ["BézierCircle003" ],
             },
             zoneColorGroupMap: {
                 zone1: { "Plane067": "primary", "Plane084": "primary" },
                 zone2: { "Plane067_1": "primary", "Plane084_8": "primary" },
-                zone3: { "Plane042": "tertiary", "Plane040": "tertiary", "Plane041": "tertiary", "Plane024": "tertiary", "Plane042_1": "secondary", "Plane040_1": "secondary", "Plane041_1": "secondary", "Plane084": "secondary", "Plane042": "tertiary", "Plane040_2": "tertiary", "Plane041_2": "tertiary", "Plane024_1": "tertiary" },
+                zone3: { "Plane040_1": "secondary", "Plane024_2": "secondary",  "Plane041_1": "secondary",  },
                 zone4: { "Plane084_5": "primary", "Plane084_6": "primary" },
                 zone5: { "Plane086_1": "primary", "Plane086": "primary" },
                 zone6: { "Plane083_1": "secondary", "Plane083": "secondary", "Plane083_2": "secondary" },
                 zone7: { "lace_neck_with_triangle_1_stripe_type1": "secondary" },
                 zone8: { "jersey_for_triangle_V_neck_collar": "secondary" },
-                zone9: { "Plane084_3": "primary", "Plane084_7": "Primary", "Plane084_4": "Primary" },
-                zone10: { "BézierCircle003": "tertiary" },
+                zone9: { "Plane084_3": "primary", "Plane084_7": "Primary", "Plane084_4": "Primary" }
             },
             subZoneColorGroupMap: {
-                stripes1: { "Plane042": "tertiary", "Plane040": "tertiary", "Plane041": "tertiary", "Plane024": "tertiary" },
-                stripes2: { "Plane042_1": "secondary", "Plane040_1": "secondary", "Plane041_1": "secondary", "Plane024_2": "secondary" },
-                stripes3: { "Plane042": "tertiary", "Plane040_2": "tertiary", "Plane041_2": "tertiary", "Plane024_1": "tertiary" },
+                stripes1: { "Plane042": "tertiary", "Plane026": "secondary", "Plane040_2": "tertiary", "Plane026_3": "secondary" },
+                stripes2: { "Plane024_2": "secondary", "Plane041_1": "secondary" , "Plane024_2": "secondary" , "Plane024_2": "secondary"  },
+                stripes3: { "Plane026_2": "secondary" },
                 collar1: { "lace_neck_with_triangle_1_stripe_type1": "secondary" },
             }
         }

@@ -511,6 +511,7 @@ JERSEY STRIPES CONTROLS UI
     position: absolute;
     right: 5px;
     top: 5px;
+    display: none !important;
 }
 
 .colorsMeshItems input[type="radio"] {
