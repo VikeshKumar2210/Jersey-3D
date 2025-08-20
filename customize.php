@@ -1341,7 +1341,7 @@ if (isset($_GET['subcat'])) {
                                                                 </label>
                                                                 <label class="colorsMeshItems">
                                                                     <input type="radio" name="zoneRadio" value="zone9">
-                                                                    <div class="meshActiveColor" id="colorPreview-"></div>
+                                                                    <div class="meshActiveColor" id="colorPreview-zone9"></div>
                                                                     <h6 class="meshActiveFaceName">Zone 9</h6>
                                                                 </label>
                                                                 <label class="colorsMeshItems">
@@ -1364,6 +1364,23 @@ if (isset($_GET['subcat'])) {
                                                                         <input type="radio" name="zoneRadio" value="stripes3">
                                                                         <div class="meshActiveColor" id="colorPreview-stripes3"></div>
                                                                         <h6 class="meshActiveFaceName">Stripes 3</h6>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="subCategory zone6 subZonesDiv ">
+                                                                    <label class="colorsMeshItems">
+                                                                        <input type="radio" name="zoneRadio" value="Shoulder1">
+                                                                        <div class="meshActiveColor" id="colorPreview-Shoulder1"></div>
+                                                                        <h6 class="meshActiveFaceName">Shoulder 1</h6>
+                                                                    </label>
+                                                                    <label class="colorsMeshItems">
+                                                                        <input type="radio" name="zoneRadio" value="Shoulder2">
+                                                                        <div class="meshActiveColor" id="colorPreview-Shoulder2"></div>
+                                                                        <h6 class="meshActiveFaceName">Shoulder 2</h6>
+                                                                    </label>
+                                                                    <label class="colorsMeshItems">
+                                                                        <input type="radio" name="zoneRadio" value="Shoulder3">
+                                                                        <div class="meshActiveColor" id="colorPreview-Shoulder3"></div>
+                                                                        <h6 class="meshActiveFaceName">Shoulder 3</h6>
                                                                     </label>
                                                                 </div>
                                                                 <div class="subCategory zone7 subZonesDiv ">
@@ -2429,6 +2446,7 @@ if (isset($_GET['subcat'])) {
                                         <a href="" class="themeBtn icnBtn">
                                             Next <figure class="my-auto"><img src="images/Icons/arrowRightWhite.png" alt=""></figure>
                                         </a>
+                                        <button class="LoadModalNow">Load Modal</button>
                                     </div>
                                 </div>
                             </div>
