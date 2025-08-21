@@ -815,6 +815,33 @@ if (isset($_GET['subcat'])) {
         });
     </script>
 </head>
+<!-----------------------------
+    HEADER_MAIN
+     ------------------------------->
+<div class="Header d-none" id="mainHeader2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="BrandLogo">
+                    <a href="index.php">
+                        <figure class="m-0">
+                            <img src="images/BrandLogo.png" alt="Company Logo" />
+                        </figure>
+                    </a>
+                </div>
+                <div class="RightSide d-flex justify-content-between align-items-center">
+                    <h6 class="font2 my-auto f14">3D Configurator</h6>
+                    <figure class="mx-2 mb-2">
+                        <img src="images/3dConf.png" alt="" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------------------
+    HEADER_MAIN
+     ------------------------------->
 
 <body>
 

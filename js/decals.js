@@ -34,26 +34,26 @@ document.addEventListener("DOMContentLoaded", function () {
     controls.minPolarAngle = 0.4; // Limit to 0 degrees (bottom)
     // New lighting setup:
     // Ambient Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.5);
     scene.add(ambientLight);
 
     // Key Light (front)
-    const keyLight = new THREE.DirectionalLight(0xffffff, 0.1);
+    const keyLight = new THREE.DirectionalLight(0xFFFFFF, 0.1);
     keyLight.position.set(5, 5, 5);
     scene.add(keyLight);
 
     // Fill Light (back)
-    const fillLight = new THREE.DirectionalLight(0xffffff, 0.4);
+    const fillLight = new THREE.DirectionalLight(0xFFFFFF, 0.4);
     fillLight.position.set(-5, 5, -5);
     scene.add(fillLight);
 
     // Rim Light (side)
-    const rimLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    const rimLight = new THREE.DirectionalLight(0xFFFFFF, 0.5);
     rimLight.position.set(-5, 5, 5);
     scene.add(rimLight);
 
     // Back Light (optional)
-    const backLight = new THREE.DirectionalLight(0xffffff, 0.3);
+    const backLight = new THREE.DirectionalLight(0xFFFFFF, 0.3);
     backLight.position.set(0, 0, -5);
     scene.add(backLight);
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.6);
+    const directionalLight = new THREE.DirectionalLight(0xFFFFFF, 0.6);
     directionalLight.position.set(0, 6, 1).normalize();
     scene.add(directionalLight);
 
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
         halfSleeves: {
             primary: 0xfdb515, // Example color for Design1
             secondary: 0x00003b,
-            tertiary: 0xffffff,
+            tertiary: 0xFFFFFF,
         },
         fullSleeves: {
             primary: 0xf5f5f5, // Example color for Design2
@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'Tri_V-neck_1_stripe_5New3.glb': {
             // neck_1_stripe_5New2
             Plane087_1: "assets/ModalPatterns/modal7/InsidePatch.svg", // Neck Inside Patch
-            Plane087: "assets/ModalPatterns/modal7/JOGStripe2.svg", // Neck Inside Stripe
+            Plane087: "assets/ModalPatterns/modal7/JOGStripe.svg", // Neck Inside Stripe
             Plane003: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Part
             Plane026: "assets/ModalPatterns/modal7/BlueSquare.svg", // Front Middle
             Plane003_1: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Hem
@@ -523,8 +523,8 @@ document.addEventListener("DOMContentLoaded", function () {
             base_stripe_5___left: "assets/ModalPatterns/modal7/BlueSquare.svg", // LS Middle 
             Plane032_6: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS lower
             Plane064_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
-            Plane032_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
-            Plane032_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Third White Layer
+            Plane032_1: "assets/ModalPatterns/modal7/yellowSquareFinal.svg", // Shoulder second Layer
+            Plane032_2: "assets/ModalPatterns/modal7/whiteSquareFinal.svg", // Shoulder Third White Layer
             Plane064: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
             Plane064_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Back
             Triangle_V__neck_1_stripes_type1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
@@ -578,7 +578,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Plane064_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
             Plane064_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Middle
             Plane064: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
-            Plane032_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
+            Plane032_1: "assets/ModalPatterns/modal7/yellowSquareFinal.svg", // Shoulder second Layer
             Plane032_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Shoulder Third White Layer
 
             Triangle_V__neck_1_stripes_type1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'V-neckStripes_5.glb': {
             // neck_1_stripe_5New2
             Plane087_1: "assets/ModalPatterns/modal7/InsidePatch.svg", // Neck Inside Patch
-            Plane087: "assets/ModalPatterns/modal7/JOGStripe2.svg", // Neck Inside Stripe
+            Plane087: "assets/ModalPatterns/modal7/JOGStripe.svg", // Neck Inside Stripe
 
             V_neck_1_stripe: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collaar
             Plane066: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // Front Part
@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Plane086: "assets/ModalPatterns/modal7/ArtBoardNew.svg", // RS lower
 
             Plane064_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
-            Plane032_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
+            Plane032_1: "assets/ModalPatterns/modal7/yellowSquareFinal.svg", // Shoulder second Layer
             Plane032_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Third White Layer
             Plane064: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
             Plane064_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Back
@@ -707,7 +707,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Plane064_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
             Plane064_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Middle
             Plane064: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
-            Plane032_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
+            Plane032_1: "assets/ModalPatterns/modal7/yellowSquareFinal.svg", // Shoulder second Layer
             Plane032_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Shoulder Third White Layer
 
             V_neck_1_stripe: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
@@ -771,7 +771,7 @@ document.addEventListener("DOMContentLoaded", function () {
             Plane083_1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Left
             Plane083_2: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Middle
             Plane083: "assets/ModalPatterns/modal7/BlueSquare.svg", // Shoulder Right
-            Plane084_1: "assets/ModalPatterns/modal7/yellowsqauresvg.svg", // Shoulder second Layer
+            Plane084_1: "assets/ModalPatterns/modal7/yellowSquareFinal.svg", // Shoulder second Layer
             Plane084_2: "assets/ModalPatterns/modal7/whiteSquare.svg", // Shoulder Third White Layer
 
             lace_neck_with_triangle_1_stripe_type1: "assets/ModalPatterns/modal7/BlueSquare.svg", // Collar 1
@@ -879,7 +879,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const COLOR_MAPPING = {
             "#fdb515": "primary",   // Original red
             "#00003b": "secondary", // Original dark blue
-            "#ffffff": "tertiary",  // White
+            "#FFFFFF": "tertiary",  // White
             "white": "tertiary"     // Also map color name "white"
         };
 
@@ -1367,7 +1367,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (error) {
             console.error(`Error loading SVG pattern for ${mesh.name}:`, error);
             // Fallback to solid color
-            const defaultColor = COLORS[colorMappings[mesh.name]] || "#ffffff";
+            const defaultColor = COLORS[colorMappings[mesh.name]] || "#FFFFFF";
             mesh.material = new THREE.MeshStandardMaterial({
                 color: new THREE.Color(defaultColor),
                 side: THREE.DoubleSide,
@@ -1403,7 +1403,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } else {
             // Fallback white background
-            ctx.fillStyle = "#ffffff";
+            ctx.fillStyle = "#FFFFFF";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
         }
 
@@ -1713,7 +1713,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 zone3: { "base_stripe_5___left": "secondary", "Plane026": "secondary", "base_stripe_5___right": "secondary", "Plane026_3": "secondary", "Plane026_1": "secondary", "Plane026_2": "secondary" },
                 zone4: { "Plane032_5": "primary", "Plane032_7": "primary" },
                 zone5: { "Plane032_6": "primary", "Plane032_8": "primary" },
-                zone6: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary", "Plane032_1": "primary", "Plane032_2": "secondary" },
+                zone6: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary", "Plane032_1": "primary", "Plane032_2": "tertiary" },
                 zone7: { "Triangle_V__neck_1_stripes_type1": "secondary" },
                 zone8: { "jersey_for_triangle_V_neck_collar": "secondary" },
                 zone9: { "Plane032_4": "primary", "Plane032_3": "primary", "Plane032_11": "primary", "Plane032_9": "primary" }
@@ -1725,7 +1725,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 collar1: { "Triangle_V__neck_1_stripes_type1": "secondary" },
                 Shoulder1: { "Plane064": "secondary", "Plane064_2": "secondary", "Plane064_1": "secondary" },
                 Shoulder2: { "Plane032_1": "primary" },
-                Shoulder3: { "Plane032_2": "secondary" },
+                Shoulder3: { "Plane032_2": "tertiary" },
 
             }
         },
@@ -1747,7 +1747,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 zone3: { "base_stripe_5___left": "secondary", "Plane026": "secondary", "base_stripe_5___right": "secondary", "Plane026_3": "secondary", },
                 zone4: { "Plane032_5": "primary", "Plane032_6": "primary" },
                 zone5: { "Plane086": "primary", "Plane086_1": "primary" },
-                zone6: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary", "Plane032_1": "primary", "Plane032_2": "secondary" },
+                zone6: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary", "Plane032_1": "primary", "Plane032_2": "tertiary" },
                 zone7: { "V_neck_1_stripe": "secondary" },
                 zone8: { "Plane026_1": "secondary", "Plane026_2": "secondary" },
                 zone9: { "Plane032_4": "primary", "Plane032_9": "primary", "Plane032_3": "primary", "Plane032_7": "primary" }
@@ -1759,7 +1759,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 collar1: { "V_neck_1_stripe": "secondary" },
                 Shoulder1: { "Plane064": "secondary", "Plane064_2": "secondary", "Plane064_1": "secondary" },
                 Shoulder2: { "Plane032_1": "primary" },
-                Shoulder3: { "Plane032_2": "secondary" },
+                Shoulder3: { "Plane032_2": "tertiary" },
 
             }
         },
@@ -1788,7 +1788,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 zone4: { "Plane084_5": "primary", "Plane084_6": "primary" },
                 zone5: { "Plane086_1": "primary", "Plane086": "primary" },
-                zone6: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary", "Plane032_1": "primary", "Plane032_2": "secondary" },
+                zone6: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary", "Plane032_1": "primary", "Plane032_2": "tertiary" },
 
                 zone7: { "lace_neck_with_triangle_1_stripe_type1": "secondary" },
                 zone8: { "jersey_for_triangle_V_neck_collar": "secondary" },
@@ -1802,7 +1802,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 collar1: { "lace_neck_with_triangle_1_stripe_type1": "secondary" },
                 Shoulder1: { "Plane064": "secondary", "Plane064_1": "secondary", "Plane064_2": "secondary" },
                 Shoulder2: { "Plane032_1": "primary" },
-                Shoulder3: { "Plane032_2": "secondary" },
+                Shoulder3: { "Plane032_2": "tertiary" },
             }
         }
         // ...
@@ -1881,7 +1881,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // }
         Shoulder1: { "Plane064": "secondary", "Plane064_2": "secondary", "Plane064_1": "secondary" },
         Shoulder2: { "Plane032_1": "primary" },
-        Shoulder3: { "Plane064_2": "secondary" },
+        Shoulder3: { "Plane032_2": "tertiary" },
 
     };
     const subzoneMap = {
@@ -2156,7 +2156,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const COLOR_MAPPING = {
                     "#fdb515": "primary",
                     "#00003b": "secondary",
-                    "#ffffff": "tertiary",
+                    "#FFFFFF": "tertiary",
                     "white": "tertiary"
                 };
 
@@ -2225,8 +2225,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const COLOR_MAPPING = {
             "#fdb515": "primary",   // Original red
             "#00003b": "secondary", // Original dark blue
-            "#ffffff": "tertiary",  // White
-            "white": "tertiary"
+            "#FFFFFF": "tertiary",  // White
+            "white": "tertiary",
+            "#ffffff": "tertiary"   // Added lowercase white
         };
 
         const getColorHex = (color) => {
@@ -2235,13 +2236,19 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (typeof color === 'number') {
                 return `#${color.toString(16).padStart(6, '0')}`;
             }
-            return color;
+            return "#000000"; // Default fallback
         };
 
         console.log("Current color settings:");
         console.log(`Primary: ${getColorHex(COLORS.primary)}`);
         console.log(`Secondary: ${getColorHex(COLORS.secondary)}`);
         console.log(`Tertiary: ${getColorHex(COLORS.tertiary)}`);
+
+        // Debug log for tertiary color
+        console.log('Tertiary color value:', COLORS.tertiary);
+        console.log('Tertiary color type:', typeof COLORS.tertiary);
+        console.log('Tertiary color after getColorHex:', getColorHex(COLORS.tertiary));
+
         const zoneMeshes = activeZoneConfig.zoneMeshMap[activeZone] || [];
         const meshColorMap = activeZoneConfig.zoneColorGroupMap[activeZone] || {};
 
@@ -2279,12 +2286,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (group && isAllowed) {
                     let replacementColor = MESH_COLORS[meshName] || COLORS[group];
-                    if (typeof replacementColor === 'number') {
-                        replacementColor = `#${replacementColor.toString(16).padStart(6, '0')}`;
-                    }
-                    if (!replacementColor.startsWith('#')) {
-                        replacementColor = `#${replacementColor}`;
-                    }
+
+                    // Ensure proper color format using getColorHex
+                    replacementColor = getColorHex(replacementColor);
 
                     newColorMap[group] = replacementColor.toLowerCase();
                     console.log(`✅ ${group} color assigned to ${meshName} in ${activeZone}: ${replacementColor}`);
@@ -2303,7 +2307,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // 🔁 Now merge all zone maps
             // 🆕 Only use active zone's color map for this mesh
             const mergedColorMap = zoneSvgColorMap[activeZone][meshName] || {};
-
 
             // 🖌️ Now apply merged colors to original SVG
             originalColors.forEach(originalColor => {
@@ -2356,7 +2359,6 @@ document.addEventListener("DOMContentLoaded", function () {
             img.src = url;
         });
     }
-
     function extractColorsFromSVG(svgContent) {
         const colors = new Set();
 
@@ -3163,7 +3165,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const COLOR_MAPPING = {
                     "#fdb515": "primary",
                     "#00003b": "secondary",
-                    "#ffffff": "tertiary",
+                    "#FFFFFF": "tertiary",
                     "white": "tertiary"
                 };
 
@@ -4154,7 +4156,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const context = canvas.getContext("2d");
 
             // Fill with white background
-            context.fillStyle = "#ffffff";
+            context.fillStyle = "#FFFFFF";
             context.fillRect(0, 0, canvas.width, canvas.height);
             const reader = new FileReader();
             reader.onload = function (event) {
@@ -4989,7 +4991,7 @@ ${displayName}
             }
 
             // Update the color preview boxes
-            updateGradientColorPreview(gradientColor1 || '#ffffff', gradientColor2 || '#ffffff');
+            updateGradientColorPreview(gradientColor1 || '#FFFFFF', gradientColor2 || '#FFFFFF');
 
             applyGradientToSelectedMesh();
         });
@@ -5605,7 +5607,7 @@ ${displayName}
             context.fillRect(0, 0, canvas.width, canvas.height);
         } else {
             // Default white background if no gradient
-            context.fillStyle = "#ffffff";
+            context.fillStyle = "#FFFFFF";
             context.fillRect(0, 0, canvas.width, canvas.height);
         }
 
@@ -6200,7 +6202,7 @@ ${displayName}
         canvas.height = 1024;
 
         // Clear canvas with white background
-        context.fillStyle = "#ffffff";
+        context.fillStyle = "#FFFFFF";
         context.fillRect(0, 0, canvas.width, canvas.height);
 
         // Draw all texts that belong to this mesh
@@ -6840,6 +6842,8 @@ ${displayName}
 
     // Mouse move event - fixed movement directions
     document.addEventListener("mousemove", (event) => {
+        if (!model) return; // 🔒 Prevent crash until model is loaded
+
         const mouse = getNormalizedMousePosition(event);
         const raycaster = new THREE.Raycaster();
         raycaster.setFromCamera(mouse, camera);
@@ -6860,7 +6864,6 @@ ${displayName}
                 return;
             }
 
-            // ❌ Do NOT allow movement across meshes
             if (activeDecal.mesh !== intersectedMesh) return;
 
             const currentMouseX = uv.x;
@@ -6896,7 +6899,6 @@ ${displayName}
                 this.hasSavedMovementState = true;
             }
 
-            // ❌ Do NOT allow movement across meshes
             if (activeDecal.mesh !== intersectedMesh) return;
 
             const newX = uv.x - imageClickOffset.x;
@@ -6909,6 +6911,7 @@ ${displayName}
             updateActiveImageDecalBounds();
         }
     });
+
 
     // Mouse up event - unchanged
     document.addEventListener("mouseup", () => {
