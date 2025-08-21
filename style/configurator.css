@@ -554,7 +554,7 @@ JERSEY STRIPES CONTROLS UI
 
 .colorsMeshItems input[type="radio"]:checked+.meshActiveColor {
     background: #BCBCBC1A;
-    border: 2px solid #575656;
+    border: 2px solid #727d8e8a;
     width: 30px;
     height: 30px;
 }
@@ -564,4 +564,17 @@ JERSEY STRIPES CONTROLS UI
 
     width: 32px;
     height: 32px;
+}
+
+.colorsMeshItems input[type="radio"]:checked+.meshActiveColor {
+    background: #BCBCBC1A;
+    border: 2px solid #575656;
+    width: 30px;
+    height: 30px;
+}
+
+.colorsMeshItems:has(input[type="radio"]:checked) {
+    border: 1px solid #10418f8a;
+    background: #1b6ef30f;
+    /* highlight parent when active */
 }

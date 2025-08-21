@@ -4602,6 +4602,17 @@ if (isset($_GET['subcat'])) {
         // Optional: hide all headers initially
         updatePlacementHeader(); // or pass a default like `updatePlacementHeader('name')`
     </script>
+
+    <script>
+        document.querySelectorAll('.colorsMeshItems input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                document.querySelectorAll('.colorsMeshItems').forEach(el => el.classList.remove('active'));
+                if (radio.checked) {
+                    radio.closest('.colorsMeshItems').classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
