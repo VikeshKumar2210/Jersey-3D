@@ -3606,6 +3606,49 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    // Example mapping (adjust per model)
+    const fabricZoneMeshMap = {
+        Base: [
+            "Plane003",
+            "Plane032",
+            "Plane026",
+            "Plane026_1",
+            "Plane026_2",
+            "Plane026_3",
+            "base_stripe_5___left",
+            "base_stripe_5___right",
+            "jersey_for_triangle_V_neck_collar",
+            "Triangle_V__neck_1_stripes_type1",
+            "Plane087",
+            "Plane087_1",
+            "Plane003_1",
+            "Plane032_1",
+            "Plane032_2",
+            "Plane032_5",
+            "Plane032_6",
+            "Plane032_7",
+            "Plane032_8",
+            "Plane032_9",
+            "Plane032_10",
+            "Plane032_11"
+        ],
+        Shoulder: ["Plane064_1", "Plane064_2", "Plane064"],
+        Mesh: ["Plane032_3", "Plane032_4"],
+        // SubZone1: ["StripeMesh1"],
+        // SubZone2: ["StripeMesh2"],
+        // SubZone3: ["StripeMesh3"],
+        // SubZone4: ["StripeMesh4"]
+    };
+    let activeFabricZone = null;
+
+    document.querySelectorAll('input[name="fabric"]').forEach(input => {
+        input.addEventListener("change", e => {
+            activeFabricZone = e.target.value; // "Base", "Shoulder", "SubZone1" etc
+            console.log("Selected zone:", activeFabricZone);
+        });
+    });
+
+
     function updateFabricForMesh(mesh) {
         if (!mesh.userData.fabricCanvas) {
             mesh.userData.fabricCanvas = document.createElement("canvas");
@@ -3632,33 +3675,44 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-
     document.querySelectorAll('input[name="fabricMaterial[]"]').forEach(input => {
-        input.addEventListener("change", (e) => {
+        input.addEventListener("change", e => {
+            if (!activeFabricZone) {
+                console.warn("⚠ Please select a zone first (Base/Shoulder/Mesh/SubZone).");
+                return;
+            }
+
             if (e.target.checked) {
                 let fabricPath = "";
 
                 switch (e.target.value) {
-                    case "fabric1":
-                        fabricPath = "images/Patterns/AirKnitProMax.png";
-                        break;
-                    case "fabric2":
-                        fabricPath = "images/Patterns/AirKnitPro.png";
-                        break;
-                    case "fabric3":
-                        fabricPath = "images/Patterns/Concave.png";
-                        break;
-                    case "fabric4":
-                        fabricPath = "images/Patterns/fabric_denim.jpg";
-                        break;
-                    default:
-                        fabricPath = "images/Patterns/polyester-fabric.jpg"; // fallback
+                    case "fabric1": fabricPath = "images/Patterns/AirKnitProMax.png"; break;
+                    case "fabric2": fabricPath = "images/Patterns/AirKnitPro.png"; break;
+                    case "fabric3": fabricPath = "images/Patterns/Concave.png"; break;
+                    case "fabric4": fabricPath = "images/Patterns/fabric_denim.jpg"; break;
+                    default: fabricPath = "images/Patterns/polyester-fabric.jpg";
                 }
 
-                setFabricTexture(fabricPath);
+                textureLoader.load(fabricPath, texture => {
+                    fabricTexture = texture;
+                    fabricTexture.wrapS = fabricTexture.wrapT = THREE.RepeatWrapping;
+                    fabricTexture.repeat.set(2, 2);
+
+                    // 👉 Only apply to meshes of selected zone
+                    if (fabricZoneMeshMap[activeFabricZone]) {
+                        fabricZoneMeshMap[activeFabricZone].forEach(meshName => {
+                            const mesh = model.getObjectByName(meshName);
+                            if (mesh) {
+                                updateFabricForMesh(mesh);          // redraw fabric canvas
+                                updateMeshTextureForMesh(mesh, {}); // rebuild full texture
+                            }
+                        });
+                    }
+                });
             }
         });
     });
+
 
     // Undo function
     function undo() {

@@ -1265,6 +1265,11 @@ if (isset($_GET['subcat'])) {
                                                                             <figure class="my-0"><img src="images/Patterns/fabric_denim.jpg" alt=""></figure>
                                                                             <h6 class="fabricName">Air Knit Pro</h6>
                                                                         </label>
+                                                                        <label class="fabricDesign checkBoxDesign">
+                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric5">
+                                                                            <figure class="my-0"><img src="images/Patterns/fabric4.jpg" alt=""></figure>
+                                                                            <h6 class="fabricName">Air Knit Pro</h6>
+                                                                        </label>
                                                                     </div>
                                                                 </form>
                                                             </div>
