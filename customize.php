@@ -1251,7 +1251,7 @@ if (isset($_GET['subcat'])) {
 
                                                                         <label class="fabricDesign checkBoxDesign">
                                                                             <input type="checkbox" name="fabricMaterial[]" value="fabric2">
-                                                                            <figure class="my-0"><img src="images/Patterns/AirKnitPro.jpg" alt=""></figure>
+                                                                            <figure class="my-0"><img src="images/Patterns/AirKnitPro.png" alt=""></figure>
                                                                             <h6 class="fabricName">Dura Light Plus</h6>
                                                                         </label>
 

@@ -1386,10 +1386,8 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.width = 1024;
         canvas.height = 1024;
 
-        const ctx = canvas.getContext("2d");
-        if (mesh.userData.fabricCanvas) {
-            ctx.drawImage(mesh.userData.fabricCanvas, 0, 0);
-        }
+        const ctx = context;
+
         // 1. ✅ Fabric texture as base layer
         if (fabricTexture && fabricTexture.image) {
             const fabricPattern = ctx.createPattern(fabricTexture.image, "repeat");
@@ -3578,7 +3576,39 @@ document.addEventListener("DOMContentLoaded", function () {
         // Keep your existing compositor/decals pipeline
         updateAllMeshTextures();
     }
+    function applyFabricToZone(zone, fabricUrl) {
+        console.log(`Applying fabric ${fabricUrl} to zone ${zone}`);
+        if (!model || !modelFabricMeshMap[zone]) return;
 
+        const loader = new THREE.TextureLoader();
+        loader.load(fabricUrl, (tex) => {
+            tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+            tex.repeat.set(2, 2);
+            tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+            tex.needsUpdate = true;
+
+            modelFabricMeshMap[zone].forEach(meshName => {
+                const mesh = model.getObjectByName(meshName);
+                if (!mesh) return;
+
+                mesh.userData = mesh.userData || {};
+                // ✅ Set per-mesh override
+                mesh.userData.customFabricTexture = tex;
+
+                // ✅ Rebuild this mesh’s composited texture (keeps decals/gradients)
+                updateMeshTextureForMesh(mesh);
+
+                // In case your compositor doesn’t replace material.map itself:
+                if (mesh.material && mesh.material.isMeshStandardMaterial) {
+                    mesh.material.map = mesh.userData.compositedTexture || mesh.userData.customFabricTexture || fabricTexture;
+                    mesh.material.needsUpdate = true;
+                }
+            });
+
+            // If your compositor builds all meshes at once, keep this:
+            updateAllMeshTextures?.();
+        });
+    }
 
     // Load fabric texture
     textureLoader.load('images/Patterns/polyester-fabric.jpg', function (texture) {
@@ -3592,73 +3622,66 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    function setFabricTexture(path) {
-        textureLoader.load(path, function (texture) {
-            fabricTexture = texture;
 
-            if (model) {
-                model.traverse(mesh => {
-                    if (mesh.isMesh) {
-                        updateFabricForMesh(mesh);            // update base only
-                        updateMeshTextureForMesh(mesh, {});   // rebuild with new fabric under
-                    }
-                });
-            }
+
+    // Zone-to-mesh mapping for fabric application
+    const modelFabricMeshMap = {
+        Base: ["Plane003", "Plane032"],
+        Shoulder: ["ShoulderMesh1", "ShoulderMesh2"],
+        Mesh: ["MeshArea1", "MeshArea2"],
+        SubZone1: ["StripeMesh1"],
+        SubZone2: ["StripeMesh2"],
+        SubZone3: ["StripeMesh3"],
+        SubZone4: ["StripeMesh4"]
+    };
+
+    // Load default polyester fabric for all zones
+    function applyDefaultFabric() {
+        Object.keys(modelFabricMeshMap).forEach(zone => {
+            applyFabricToZone(zone, "images/Patterns/polyester-fabric.jpg");
         });
     }
-    function updateFabricForMesh(mesh) {
-        if (!mesh.userData.fabricCanvas) {
-            mesh.userData.fabricCanvas = document.createElement("canvas");
-            mesh.userData.fabricCanvas.width = 1024;
-            mesh.userData.fabricCanvas.height = 1024;
-        }
 
-        const ctx = mesh.userData.fabricCanvas.getContext("2d");
-        ctx.clearRect(0, 0, 1024, 1024);
 
-        if (fabricTexture && fabricTexture.image) {
-            const pattern = ctx.createPattern(fabricTexture.image, "repeat");
-            const scale = 0.5;
-            const transform = new DOMMatrix().scaleSelf(scale, scale);
-            if (pattern.setTransform) pattern.setTransform(transform);
 
-            ctx.fillStyle = pattern;
-            ctx.globalAlpha = 0.35; // subtle base
-            ctx.fillRect(0, 0, 1024, 1024);
-            ctx.globalAlpha = 1;
-        } else {
-            ctx.fillStyle = "#fff";
-            ctx.fillRect(0, 0, 1024, 1024);
-        }
+    // Run once when model is loaded
+    function onModelLoaded(loadedModel) {
+        model = loadedModel;
+        applyDefaultFabric();  // put polyester everywhere first
     }
+    let activeFabricZone = null;
 
-
-    document.querySelectorAll('input[name="fabricMaterial[]"]').forEach(input => {
-        input.addEventListener("change", (e) => {
-            if (e.target.checked) {
-                let fabricPath = "";
-
-                switch (e.target.value) {
-                    case "fabric1":
-                        fabricPath = "images/Patterns/AirKnitProMax.png";
-                        break;
-                    case "fabric2":
-                        fabricPath = "images/Patterns/AirKnitPro.png";
-                        break;
-                    case "fabric3":
-                        fabricPath = "images/Patterns/Concave.png";
-                        break;
-                    case "fabric4":
-                        fabricPath = "images/Patterns/fabric_denim.jpg";
-                        break;
-                    default:
-                        fabricPath = "images/Patterns/polyester-fabric.jpg"; // fallback
-                }
-
-                setFabricTexture(fabricPath);
-            }
+    // Zone selection (radio buttons)
+    document.querySelectorAll("#fabricForm input[name='fabric']").forEach(radio => {
+        radio.addEventListener("change", () => {
+            activeFabricZone = radio.value;
+            console.log("Active Fabric Zone:", activeFabricZone);
         });
     });
+
+    // Fabric design selection (checkboxes)
+    document.querySelectorAll("#fabricForm input[name='fabricMaterial[]']").forEach(checkbox => {
+        checkbox.addEventListener("change", () => {
+            if (!activeFabricZone) {
+                alert("Please select a fabric zone first!");
+                checkbox.checked = false;
+                return;
+            }
+
+            // Only allow one fabric per zone
+            document.querySelectorAll("#fabricForm input[name='fabricMaterial[]']").forEach(cb => {
+                if (cb !== checkbox) cb.checked = false;
+            });
+
+            // ✅ Get the actual image file path from the <figure><img>
+            const fabricUrl = checkbox.closest("label").querySelector("img").getAttribute("src");
+            applyFabricToZone(activeFabricZone, fabricUrl);
+
+            console.log("Applying fabric", fabricUrl, "to zone", activeFabricZone);
+            applyFabricToZone(activeFabricZone, fabricUrl);
+        });
+    });
+
 
     // Undo function
     function undo() {

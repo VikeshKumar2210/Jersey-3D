@@ -1386,10 +1386,8 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.width = 1024;
         canvas.height = 1024;
 
-        const ctx = canvas.getContext("2d");
-        if (mesh.userData.fabricCanvas) {
-            ctx.drawImage(mesh.userData.fabricCanvas, 0, 0);
-        }
+        const ctx = context;
+
         // 1. ✅ Fabric texture as base layer
         if (fabricTexture && fabricTexture.image) {
             const fabricPattern = ctx.createPattern(fabricTexture.image, "repeat");
@@ -3595,43 +3593,15 @@ document.addEventListener("DOMContentLoaded", function () {
     function setFabricTexture(path) {
         textureLoader.load(path, function (texture) {
             fabricTexture = texture;
+            fabricTexture.wrapS = fabricTexture.wrapT = THREE.RepeatWrapping;
+            fabricTexture.repeat.set(2, 2);
+            fabricTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
             if (model) {
-                model.traverse(mesh => {
-                    if (mesh.isMesh) {
-                        updateFabricForMesh(mesh);            // update base only
-                        updateMeshTextureForMesh(mesh, {});   // rebuild with new fabric under
-                    }
-                });
+                applyFabricTextureToModel(); // reapply with new fabric
             }
         });
     }
-    function updateFabricForMesh(mesh) {
-        if (!mesh.userData.fabricCanvas) {
-            mesh.userData.fabricCanvas = document.createElement("canvas");
-            mesh.userData.fabricCanvas.width = 1024;
-            mesh.userData.fabricCanvas.height = 1024;
-        }
-
-        const ctx = mesh.userData.fabricCanvas.getContext("2d");
-        ctx.clearRect(0, 0, 1024, 1024);
-
-        if (fabricTexture && fabricTexture.image) {
-            const pattern = ctx.createPattern(fabricTexture.image, "repeat");
-            const scale = 0.5;
-            const transform = new DOMMatrix().scaleSelf(scale, scale);
-            if (pattern.setTransform) pattern.setTransform(transform);
-
-            ctx.fillStyle = pattern;
-            ctx.globalAlpha = 0.35; // subtle base
-            ctx.fillRect(0, 0, 1024, 1024);
-            ctx.globalAlpha = 1;
-        } else {
-            ctx.fillStyle = "#fff";
-            ctx.fillRect(0, 0, 1024, 1024);
-        }
-    }
-
 
     document.querySelectorAll('input[name="fabricMaterial[]"]').forEach(input => {
         input.addEventListener("change", (e) => {
