@@ -40,6 +40,15 @@ if (isset($_GET['subcat'])) {
             text-transform: capitalize;
         }
 
+        .LoadModalNow {
+            background: #050505;
+            border: none;
+            border-radius: 2px;
+            color: #FFF;
+            font-size: 14px;
+            padding: 5px 15px;
+        }
+
         .appliedDecalsList {
             display: flex;
             flex-direction: column;
@@ -1054,7 +1063,7 @@ if (isset($_GET['subcat'])) {
                                                                             <div class="JerseyVNeckWithoutPatch grid3">
                                                                                 <label class="JerseyItems checkBoxDesign">
                                                                                     <input type="checkbox" name="fabricMaterial[]" value="style3">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck 5inches.png" alt=""></figure>
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck5inches.png" alt=""></figure>
                                                                                     <h6 class="fabricName"> Style 3 V-Neck Without Patch</h6>
                                                                                 </label>
                                                                             </div>
@@ -1096,11 +1105,11 @@ if (isset($_GET['subcat'])) {
                                                                                 ⚠️ Please choose a collar first before selecting stripes.
                                                                             </div>
                                                                             <div class="forTriangleVNeck grid3">
-                                                                                <label class="JerseyItems checkBoxDesign">
+                                                                                <!-- <label class="JerseyItems checkBoxDesign">
                                                                                     <input type="checkbox" name="fabricMaterial[]" value="stripe1">
                                                                                     <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/0.5-1-2-1-0.5.png" alt=""></figure>
                                                                                     <h6 class="fabricName"> <span>0.5-1-2-1-0.5 Inches</span></h6>
-                                                                                </label>
+                                                                                </label> -->
                                                                                 <label class="JerseyItems checkBoxDesign">
                                                                                     <input type="checkbox" name="fabricMaterial[]" value="stripe2">
                                                                                     <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
@@ -1117,8 +1126,8 @@ if (isset($_GET['subcat'])) {
                                                                             <div class="forVNeck grid3">
                                                                                 <label class="JerseyItems checkBoxDesign">
                                                                                     <input type="checkbox" name="fabricMaterial[]" value="stripe1">
-                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck0.5-1-2-1-0.5.png" alt=""></figure>
-                                                                                    <h6 class="fabricName"> <span> 0.5-1-2-1-0.5 Inches</span></h6>
+                                                                                    <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriWithoutPatch/VNeck5inches.png" alt=""></figure>
+                                                                                    <h6 class="fabricName"> <span> 5 Inches</span></h6>
                                                                                 </label>
                                                                             </div>
                                                                             <div class="ForTriSewInLace grid3">
@@ -1209,62 +1218,25 @@ if (isset($_GET['subcat'])) {
 
                                                                         <label class="fabricDesign checkBoxDesign">
                                                                             <input type="checkbox" name="fabricMaterial[]" value="fabric1">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric1.png" alt=""></figure>
+                                                                            <figure class="my-0"><img src="images/Patterns/AirKnitProMax.png" alt=""></figure>
                                                                             <h6 class="fabricName">Dura Light</h6>
                                                                         </label>
 
                                                                         <label class="fabricDesign checkBoxDesign">
                                                                             <input type="checkbox" name="fabricMaterial[]" value="fabric2">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric2.png" alt=""></figure>
+                                                                            <figure class="my-0"><img src="images/Patterns/AirKnitPro.jpg" alt=""></figure>
                                                                             <h6 class="fabricName">Dura Light Plus</h6>
                                                                         </label>
 
                                                                         <label class="fabricDesign checkBoxDesign">
                                                                             <input type="checkbox" name="fabricMaterial[]" value="fabric3">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric4.png" alt=""></figure>
+                                                                            <figure class="my-0"><img src="images/Patterns/Concave.png" alt=""></figure>
                                                                             <h6 class="fabricName">Air Knit Pro</h6>
                                                                         </label>
-
                                                                         <label class="fabricDesign checkBoxDesign">
                                                                             <input type="checkbox" name="fabricMaterial[]" value="fabric4">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric5.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Air Knit Pro Max</h6>
-                                                                        </label>
-
-                                                                        <label class="fabricDesign checkBoxDesign">
-                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric5">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric6.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Air Knit Pro ‘X’</h6>
-                                                                        </label>
-                                                                        <label class="fabricDesign checkBoxDesign">
-                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric6">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric7.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Concave Pro Emboss</h6>
-                                                                        </label>
-                                                                        <label class="fabricDesign checkBoxDesign">
-                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric7">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric8.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Endurance Pro PK</h6>
-                                                                        </label>
-                                                                        <label class="fabricDesign checkBoxDesign">
-                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric8">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric9.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Poly-Pro Mesh</h6>
-                                                                        </label>
-                                                                        <label class="fabricDesign checkBoxDesign">
-                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric9">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric10.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Poly-Pro Stretch Mesh</h6>
-                                                                        </label>
-                                                                        <label class="fabricDesign checkBoxDesign">
-                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric10">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric11.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Pro Stretch RIB</h6>
-                                                                        </label>
-                                                                        <label class="fabricDesign checkBoxDesign">
-                                                                            <input type="checkbox" name="fabricMaterial[]" value="fabric11">
-                                                                            <figure class="my-0"><img src="images/Patterns/fabric12.png" alt=""></figure>
-                                                                            <h6 class="fabricName">Tuff Shell</h6>
+                                                                            <figure class="my-0"><img src="images/Patterns/fabric_denim.jpg" alt=""></figure>
+                                                                            <h6 class="fabricName">Air Knit Pro</h6>
                                                                         </label>
                                                                     </div>
                                                                 </form>
@@ -1434,7 +1406,7 @@ if (isset($_GET['subcat'])) {
                                                                                 <div class="palette kellyGreen" data-color="#4C9F38" title="PMS 355C Kelly Green"></div>
                                                                             </label>
                                                                         </div>
-                                                                        <div class="colorItems">
+                                                                        <!-- <div class="colorItems">
                                                                             <label>
                                                                                 <input type="checkbox" class="colorCheckbox" value="#78D64B" data-title="PMS 802C Neon Green">
                                                                                 <div class="palette neonGreen" data-color="#78D64B" title="PMS 802C Neon Green"></div>
@@ -1457,7 +1429,7 @@ if (isset($_GET['subcat'])) {
                                                                                 <input type="checkbox" class="colorCheckbox" value="#3F2A56" data-title="PMS 274C Kings Purple">
                                                                                 <div class="palette kingsPurple" data-color="#3F2A56" title="PMS 274C Kings Purple"></div>
                                                                             </label>
-                                                                        </div>
+                                                                        </div> -->
 
                                                                         <!-- Column 2 -->
                                                                         <div class="colorItems">
@@ -2443,10 +2415,12 @@ if (isset($_GET['subcat'])) {
                                                 <img src="images/Icons/arrowLeft.png" alt="">
                                             </figure> Go Back
                                         </a>
-                                        <a href="" class="themeBtn icnBtn">
-                                            Next <figure class="my-auto"><img src="images/Icons/arrowRightWhite.png" alt=""></figure>
-                                        </a>
-                                        <button class="LoadModalNow">Load Modal</button>
+                                        <div class="flexRow">
+                                            <a href="" class="themeBtn icnBtn">
+                                                Next <figure class="my-auto"><img src="images/Icons/arrowRightWhite.png" alt=""></figure>
+                                            </a>
+                                            <button class="LoadModalNow">Load Modal</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2508,6 +2482,16 @@ if (isset($_GET['subcat'])) {
                     </div>
                     <!-- HTML -->
                     <div id="threejs-container"></div>
+                    <!-- <div class="showImgAccordingCollar_Style_Stripes">
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                        <figure class="my-0"><img src="assets/accordingCollar/stripesType/TriNeckWithPatch/5-inches.png" alt=""></figure>
+                    </div> -->
                     <div id="controls">
                         <button id="toggleRotationBtn"></button>
                         <button id="rotateRight">

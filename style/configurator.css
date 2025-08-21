@@ -373,6 +373,11 @@ li.nav-item.border-left {
     gap: 0 10px;
 }
 
+.allFabricMaterials .fabricDesign img {
+    height: 80px;
+    border-radius: 4px;
+}
+
 .allFabricMaterials .checkBoxDesign img {
     width: 100%;
 }
@@ -401,6 +406,7 @@ li.nav-item.border-left {
     min-height: 40px;
     color: #111111;
 }
+
 /* .JerseyAllStyles  .checkBoxDesign .fabricName {
     font-size: 12px;
     font-weight: 500; 
@@ -488,6 +494,14 @@ JERSEY STRIPES CONTROLS UI
 .JerseyAllStripes .JerseyItems .fabricName span {
     display: block;
     font-weight: 600;
+}
+
+.showImgAccordingCollar_Style_Stripes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* =========================================================
