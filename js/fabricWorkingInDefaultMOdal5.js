@@ -2449,11 +2449,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         currentModelType = modelType; // Store the current model type
         currentModelType = modelType;
-        currentModelFilename = url.split('/').pop();
-        currentModelKey = currentModelFilename;
-        console.log("🔑 Loaded model key:", currentModelKey);
-        console.log("📦 Zone map available:", getActiveFabricZoneMap());
-
+        currentModelFilename = url.split('/').pop(); // Clear previous model and decals
         // Hide all forms initially
         activeZoneConfig = modalZoneConfig[currentModelFilename];
         if (!activeZoneConfig) activeZoneConfig = modalZoneConfig["Tri_V-neck_1_stripe_5New3.glb"];
@@ -3611,41 +3607,38 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     // Example mapping (adjust per model)
-
-    // Track current model key
-    let currentModelKey = "default";
-
-    // Helper → get zone map for current model
-    function getActiveFabricZoneMap() {
-        return fabricZoneMeshMapByModel[currentModelKey] || {};
-    }
-    // Fabric zone mappings per model type
-    // Fabric Zone Map per Model (.glb filename as key)
-    const fabricZoneMeshMapByModel = {
-        "Tri_V-neck_1_stripe_5New3.glb": {
-            Base: [
-                "Plane003", "Plane032", "Plane026",
-                "Plane026_1", "Plane026_2", "Plane026_3",
-                "base_stripe_5___left", "base_stripe_5___right",
-                "jersey_for_triangle_V_neck_collar",
-                "Triangle_V__neck_1_stripes_type1",
-                "Plane087", "Plane087_1",
-                "Plane003_1", "Plane032_1", "Plane032_2",
-                "Plane032_5", "Plane032_6", "Plane032_7",
-                "Plane032_8", "Plane032_9", "Plane032_10", "Plane032_11"
-            ],
-            Shoulder: ["Plane064_1", "Plane064_2", "Plane064"],
-            Mesh: ["Plane032_3", "Plane032_4"]
-        },
-
-        "V-neckStripes_5.glb": {
-            Base: ["Plane066", "Plane032"],
-            Shoulder: ["Plane064_1", "Plane064"],
-            Mesh: ["Plane032_6", "Plane086"]
-        }
+    const fabricZoneMeshMap = {
+        Base: [
+            "Plane003",
+            "Plane032",
+            "Plane026",
+            "Plane026_1",
+            "Plane026_2",
+            "Plane026_3",
+            "base_stripe_5___left",
+            "base_stripe_5___right",
+            "jersey_for_triangle_V_neck_collar",
+            "Triangle_V__neck_1_stripes_type1",
+            "Plane087",
+            "Plane087_1",
+            "Plane003_1",
+            "Plane032_1",
+            "Plane032_2",
+            "Plane032_5",
+            "Plane032_6",
+            "Plane032_7",
+            "Plane032_8",
+            "Plane032_9",
+            "Plane032_10",
+            "Plane032_11"
+        ],
+        Shoulder: ["Plane064_1", "Plane064_2", "Plane064"],
+        Mesh: ["Plane032_3", "Plane032_4"],
+        // SubZone1: ["StripeMesh1"],
+        // SubZone2: ["StripeMesh2"],
+        // SubZone3: ["StripeMesh3"],
+        // SubZone4: ["StripeMesh4"]
     };
-
-
     let activeFabricZone = null;
 
     document.querySelectorAll('input[name="fabric"]').forEach(input => {
@@ -3685,7 +3678,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('input[name="fabricMaterial[]"]').forEach(input => {
         input.addEventListener("change", e => {
             if (!activeFabricZone) {
-                console.warn("⚠ Please select a zone first (Base/Shoulder/Mesh).");
+                console.warn("⚠ Please select a zone first (Base/Shoulder/Mesh/SubZone).");
                 return;
             }
 
@@ -3705,14 +3698,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     fabricTexture.wrapS = fabricTexture.wrapT = THREE.RepeatWrapping;
                     fabricTexture.repeat.set(2, 2);
 
-                    // 👉 Use current model’s mapping
-                    const zoneMap = getActiveFabricZoneMap();
-                    if (zoneMap[activeFabricZone]) {
-                        zoneMap[activeFabricZone].forEach(meshName => {
+                    // 👉 Only apply to meshes of selected zone
+                    if (fabricZoneMeshMap[activeFabricZone]) {
+                        fabricZoneMeshMap[activeFabricZone].forEach(meshName => {
                             const mesh = model.getObjectByName(meshName);
                             if (mesh) {
-                                updateFabricForMesh(mesh);
-                                updateMeshTextureForMesh(mesh, {});
+                                updateFabricForMesh(mesh);          // redraw fabric canvas
+                                updateMeshTextureForMesh(mesh, {}); // rebuild full texture
                             }
                         });
                     }
